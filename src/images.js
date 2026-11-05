@@ -4,7 +4,13 @@ const files = import.meta.glob('./assets/photos/*.webp', { eager: true, import: 
 
 const photo = (name, focus = 'center') => {
   const small = files[`./assets/photos/${name}-800.webp`]
-  return { small, large: files[`./assets/photos/${name}-1600.webp`] ?? small, focus, zoom: 1 }
+  return {
+    tiny: files[`./assets/photos/${name}-480.webp`],
+    small,
+    large: files[`./assets/photos/${name}-1600.webp`],
+    focus,
+    zoom: 1,
+  }
 }
 
 export { adamusLogo }
