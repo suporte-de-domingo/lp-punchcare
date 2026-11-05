@@ -1,3 +1,4 @@
+import { Reveal } from './Reveal'
 import { Symbol } from './Logo'
 import { features } from '../content'
 
@@ -5,7 +6,7 @@ export function PunchControl() {
   return (
     <section id="punch-control" className="section">
       <div className="container">
-        <div className="software">
+        <Reveal className="software">
           <div>
             <p className="eyebrow eyebrow-light">Software</p>
             <h2>Punch Control: a gestão do seu ferramental na web.</h2>
@@ -26,9 +27,9 @@ export function PunchControl() {
             </a>
           </div>
           <div className="software-mark">
-            <Symbol size={280} ring="#FFFFFF" />
+            <Symbol size={260} ring="#FFFFFF" />
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

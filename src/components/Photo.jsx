@@ -7,7 +7,7 @@ export function Photo({ alt, focus = 'center', zoom = 1, className = '', eager =
       className={`photo ${className}`}
       src={large}
       srcSet={`${small} 800w, ${large} 1600w`}
-      sizes="(max-width: 800px) 100vw, 50vw"
+      sizes="(max-width: 768px) 100vw, 50vw"
       alt={alt}
       style={{ objectPosition: focus, transform: `scale(${zoom})`, transformOrigin: focus }}
       loading={eager ? 'eager' : 'lazy'}

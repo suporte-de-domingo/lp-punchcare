@@ -1,23 +1,31 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Logo } from './Logo'
 import { menu, whatsappLink } from '../content'
 
 export function Header() {
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
-    <header className="header">
+    <header className={scrolled || open ? 'header header-solid' : 'header'}>
       <div className="container header-row">
-        <a href="#inicio" aria-label="Punch Care, início">
+        <a className="header-logo" href="#inicio" aria-label="Punch Care, início" onClick={() => setOpen(false)}>
           <Logo />
         </a>
 
         <button
-          className="menu-button"
+          className={open ? 'menu-button menu-button-open' : 'menu-button'}
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-controls="menu"
-          aria-label="Abrir menu"
+          aria-label={open ? 'Fechar menu' : 'Abrir menu'}
         >
           <span />
           <span />

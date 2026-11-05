@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Reveal } from './Reveal'
 import { contact, whatsappLink } from '../content'
 
 const emptyForm = { name: '', company: '', service: '', message: '' }
@@ -23,7 +24,7 @@ export function Contact() {
   return (
     <section id="contato" className="section">
       <div className="container contact">
-        <div>
+        <Reveal>
           <p className="eyebrow">Contato</p>
           <h2>Vamos cuidar do seu ferramental?</h2>
           <dl className="contact-list">
@@ -44,9 +45,9 @@ export function Contact() {
               <dd>{contact.city}</dd>
             </div>
           </dl>
-        </div>
+        </Reveal>
 
-        <form className="form" onSubmit={send}>
+        <Reveal as="form" className="form" onSubmit={send} delay={120}>
           <h3>Peça um orçamento</h3>
           <label>
             Nome
@@ -77,7 +78,7 @@ export function Contact() {
             />
           </label>
           <button className="button" type="submit">Enviar pelo WhatsApp</button>
-        </form>
+        </Reveal>
       </div>
     </section>
   )
