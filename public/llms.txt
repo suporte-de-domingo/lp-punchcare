@@ -8,10 +8,6 @@
 - Dimensionamento: medição completa com relatório por peça.
 - Representação técnica: ferramental novo com apoio na especificação do jogo.
 
-## Software
-
-- Punch Control: sistema web de gestão do ferramental (vida útil, medições, ocorrências e produção). Uma solução Suporte de Domingo e Punch Care. https://punchcontrol.com.br
-
 ## Contato
 
 - WhatsApp: (11) 94020-7989
