@@ -33,13 +33,13 @@ export function Post() {
             <video
               className="article-photo article-video hero-step"
               src={post.video}
-              poster={images[post.image].large}
+              poster={images[post.image].small}
               controls
               preload="none"
               playsInline
             />
           ) : (
-            <Photo image={images[post.image]} alt={post.title} className="article-photo hero-step" eager />
+            <Photo image={images[post.image]} alt={post.title} className="article-photo hero-step" sizes="(max-width: 860px) 100vw, 780px" eager />
           )}
           {post.body.map((block, index) =>
             Array.isArray(block) ? (

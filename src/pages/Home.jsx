@@ -43,8 +43,8 @@ export function Home() {
             {home.statement}
           </Reveal>
           <Reveal className="statement-photos" delay={150}>
-            <Photo image={images.pills} alt="" className="statement-photo" />
-            <Photo image={images.punchesDetail} alt="" className="statement-photo" />
+            <Photo image={images.pills} alt="" className="statement-photo" sizes="(max-width: 860px) 50vw, 340px" />
+            <Photo image={images.punchesDetail} alt="" className="statement-photo" sizes="(max-width: 860px) 50vw, 340px" />
           </Reveal>
         </div>
       </section>

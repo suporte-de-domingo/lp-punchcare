@@ -31,7 +31,7 @@ export function News() {
           <div className="card-grid card-grid-3">
             {posts.map((post, index) => (
               <Reveal key={post.slug} delay={(index % 3) * 120}>
-                <PostCard post={post} />
+                <PostCard post={post} headingLevel={2} />
               </Reveal>
             ))}
           </div>

@@ -54,7 +54,7 @@ export function Solutions() {
           <div className="gallery">
             {images.gallery.map((image, index) => (
               <Reveal key={index} delay={(index % 5) * 100}>
-                <Photo image={image} alt="" className="gallery-photo" sizes="(max-width: 640px) 50vw, 20vw" />
+                <Photo image={image} alt="" className="gallery-photo" sizes="(max-width: 640px) 50vw, 240px" />
               </Reveal>
             ))}
           </div>

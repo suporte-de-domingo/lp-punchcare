@@ -2,6 +2,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { loadEnv } from 'vite'
 import { languages, pageList } from '../src/routes.js'
+import { render as renderApp } from '../dist-server/entry-server.js'
 
 const siteUrl = loadEnv('production', process.cwd(), '').VITE_SITE_URL.replace(/\/$/, '')
 const template = readFileSync('dist/index.html', 'utf8')
@@ -27,6 +28,7 @@ const alternates = (page) => {
 
 const render = (page) => {
   let html = template
+    .replace('<div id="root"></div>', `<div id="root" data-path="${page.url}">${renderApp(page.url)}</div>`)
     .replace(/<html lang="[^"]*"/, `<html lang="${page.lang}"`)
     .replace(/<title>[^<]*<\/title>/, `<title>${escape(page.title)}</title>`)
     .replace(/(<link rel="canonical" href=")[^"]*(")/, `$1${siteUrl}${page.url}$2`)
@@ -46,7 +48,7 @@ for (const page of pages) {
   writeFileSync(file, render(page))
 }
 
-writeFileSync('dist/404.html', template)
+writeFileSync('dist/404.html', template.replace('<div id="root"></div>', `<div id="root" data-path="/404">${renderApp('/404')}</div>`))
 
 const sitemap = [
   '<?xml version="1.0" encoding="UTF-8"?>',

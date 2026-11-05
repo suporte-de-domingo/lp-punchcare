@@ -13,6 +13,7 @@ export const en = {
     quote: 'Request a quote',
     openMenu: 'Open menu',
     closeMenu: 'Close menu',
+    mainMenu: 'Main menu',
   },
   home: {
     title: 'Tooling Solutions for the Pharmaceutical Industry',
@@ -185,6 +186,8 @@ export const en = {
     newsletterSubject: 'I want to receive Punch Care news',
     zip: 'ZIP Code',
     credit: 'Website by',
+    legal: 'Legal information',
+    social: 'Social media',
   },
   privacy: {
     title: 'Privacy Policy',

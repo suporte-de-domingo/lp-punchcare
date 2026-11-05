@@ -2,8 +2,9 @@
   --navy: #012d48;
   --navy-light: #0a4468;
   --orange: #f2961b;
-  --flame: #ed5b20;
-  --flame-dark: #d24a14;
+  --orange-text: #c47612;
+  --flame: #c2410c;
+  --flame-dark: #a8380a;
   --ice: #f4f6f8;
   --steel: #66727f;
   --ink: #14202b;
@@ -193,7 +194,7 @@ p {
 .button:hover {
   background: var(--flame-dark);
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px -12px rgba(237, 91, 32, 0.7);
+  box-shadow: 0 10px 24px -12px rgba(194, 65, 12, 0.7);
 }
 
 .button-small {
@@ -245,32 +246,20 @@ p {
 }
 
 .logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  white-space: nowrap;
+  display: block;
+  width: 228px;
+  height: 44px;
+  overflow: visible;
 }
 
 .logo-name {
-  font: 800 18px/1 var(--title);
+  font: 800 18px var(--title);
   letter-spacing: 0.04em;
-  color: var(--navy);
 }
 
 .logo-tagline {
-  margin-top: 5px;
-  font: 600 7px/1 var(--title);
+  font: 600 7px var(--title);
   letter-spacing: 0.28em;
-  color: var(--orange);
-}
-
-.logo-light .logo-name {
-  color: var(--white);
 }
 
 .header {
@@ -591,6 +580,7 @@ p {
 .work-card .number {
   margin-bottom: 12px;
   font-size: 32px;
+  color: var(--orange-text);
 }
 
 .work-card h2 {
@@ -683,6 +673,10 @@ p {
   flex-direction: column;
   gap: 10px;
   padding: 28px;
+}
+
+.post-card-title {
+  font-size: clamp(18px, 1.5vw, 20px);
 }
 
 .post-card-body .muted {
@@ -1085,7 +1079,7 @@ p {
 .footer-contact {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   font-style: normal;
 }
 
@@ -1120,7 +1114,21 @@ p {
 
 .footer-links {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 0 24px;
+}
+
+.footer-links a,
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.footer-contact a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
 }
 
 .whatsapp {

@@ -31,7 +31,7 @@ export function Header() {
   return (
     <header className={scrolled || open ? 'header header-solid' : 'header'}>
       <div className="container header-row">
-        <Link className="header-logo" to={to(paths.home)} aria-label="Punch Care">
+        <Link className="header-logo" to={to(paths.home)}>
           <Logo />
         </Link>
 
@@ -47,7 +47,7 @@ export function Header() {
           <span />
         </button>
 
-        <nav id="menu" className={open ? 'menu menu-open' : 'menu'}>
+        <nav id="menu" className={open ? 'menu menu-open' : 'menu'} aria-label={t.nav.mainMenu}>
           {items.map((item) => (
             <NavLink key={item.path} to={to(item.path)} end={item.path === paths.home}>
               {item.label}
