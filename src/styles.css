@@ -708,10 +708,12 @@ p {
   background: rgba(255, 255, 255, 0.04);
 }
 
-.adamus-name {
-  font: 800 30px/1 var(--title);
-  letter-spacing: 0.18em;
-  color: var(--white);
+.adamus-logo {
+  width: 220px;
+  height: auto;
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: var(--white);
 }
 
 .adamus-note {
@@ -719,12 +721,9 @@ p {
 }
 
 .adamus-inline {
-  align-self: flex-start;
-  border-color: var(--line);
-}
-
-.adamus-inline .adamus-name {
-  color: var(--navy);
+  margin-top: 32px;
+  padding: 0;
+  border: 0;
 }
 
 .steps-grid {
@@ -752,7 +751,7 @@ p {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
   margin-top: 72px;
 }
@@ -819,6 +818,12 @@ p {
   aspect-ratio: 16 / 9;
   margin: 40px 0 16px;
   border-radius: var(--radius);
+}
+
+.article-video {
+  display: block;
+  width: 100%;
+  background: var(--navy);
 }
 
 .article-list {
@@ -1219,6 +1224,7 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 
+
   .contact {
     grid-template-columns: 1fr;
   }
@@ -1287,10 +1293,6 @@ p {
 
   .gallery {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .gallery > :last-child {
-    display: none;
   }
 
   .statement-photo:last-child {

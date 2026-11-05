@@ -272,6 +272,7 @@ export const pt = {
     {
       slug: 'polimento-de-puncoes',
       image: 'postPolishingVideo',
+      video: '/videos/polimento-de-puncoes.mp4',
       title: 'Polimento de punções',
       date: '28 de jan.',
       author: 'Oberto Alves Oliveira',

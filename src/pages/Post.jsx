@@ -4,7 +4,7 @@ import { PostCard } from '../components/PostCard'
 import { Reveal } from '../components/Reveal'
 import { NotFound } from './NotFound'
 import { useLanguage } from '../language'
-import { images } from '../images'
+import { adamusLogo, images } from '../images'
 import { paths } from '../routes'
 import { company } from '../content/company'
 
@@ -29,7 +29,18 @@ export function Post() {
             {post.author} · {post.date} · {post.minutes} {t.news.read}
             {post.updated && ` · ${t.news.updated} ${post.updated}`}
           </p>
-          <Photo image={images[post.image]} alt={post.title} className="article-photo hero-step" eager />
+          {post.video ? (
+            <video
+              className="article-photo article-video hero-step"
+              src={post.video}
+              poster={images[post.image].large}
+              controls
+              preload="none"
+              playsInline
+            />
+          ) : (
+            <Photo image={images[post.image]} alt={post.title} className="article-photo hero-step" eager />
+          )}
           {post.body.map((block, index) =>
             Array.isArray(block) ? (
               <ul key={index} className="article-list">
@@ -43,7 +54,7 @@ export function Post() {
           )}
           {post.adamus && (
             <a className="adamus adamus-inline" href={company.adamus} target="_blank" rel="noreferrer">
-              <span className="adamus-name">ADAMUS</span>
+              <img className="adamus-logo" src={adamusLogo} alt="Adamus S.A." width="600" height="178" loading="lazy" />
             </a>
           )}
         </div>

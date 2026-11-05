@@ -1,19 +1,25 @@
-import small from './assets/puncoes-800.webp'
-import large from './assets/puncoes-1600.webp'
+import adamusLogo from './assets/photos/adamus.webp'
 
-const punches = (focus, zoom = 1) => ({ small, large, focus, zoom })
+const files = import.meta.glob('./assets/photos/*.webp', { eager: true, import: 'default' })
+
+const photo = (name, focus = 'center') => {
+  const small = files[`./assets/photos/${name}-800.webp`]
+  return { small, large: files[`./assets/photos/${name}-1600.webp`] ?? small, focus, zoom: 1 }
+}
+
+export { adamusLogo }
 
 export const images = {
-  hero: punches('60% 40%'),
-  pills: punches('20% 60%', 1.6),
-  punchesDetail: punches('80% 30%', 1.8),
-  punchesCoatings: punches('45% 50%', 1.3),
-  conveyor: punches('50% 80%', 1.4),
-  tabletsYellow: punches('30% 30%', 1.5),
-  conveyorLine: punches('70% 60%', 1.4),
-  postPolishingVideo: punches('15% 40%', 1.6),
-  postRepresentation: punches('55% 30%', 1.5),
-  postSizing: punches('85% 55%', 1.6),
-  postPolishing: punches('35% 70%', 1.6),
-  gallery: [punches('10% 30%', 2), punches('50% 40%', 2), punches('90% 35%', 2)],
+  hero: photo('hero', '60% 50%'),
+  pills: photo('pills-container'),
+  punchesDetail: photo('punch', 'center 35%'),
+  punchesCoatings: photo('coated-punches'),
+  conveyor: photo('conveyor'),
+  tabletsYellow: photo('tablets-yellow'),
+  conveyorLine: photo('conveyor-line'),
+  postPolishingVideo: photo('post-polishing-video'),
+  postRepresentation: photo('post-representation'),
+  postSizing: photo('post-sizing'),
+  postPolishing: photo('post-polishing'),
+  gallery: ['01', '02', '03', '04', '05', '07', '08', '09', '10', '11'].map((number) => photo(`gallery-${number}`)),
 }
