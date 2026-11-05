@@ -31,7 +31,20 @@ Para publicar em outro endereço durante a validação, defina `VITE_SITE_URL` n
 
 ## Onde mexer
 
-- Textos, serviços, contatos e menu: `src/content.js`
-- Seções da página: `src/components/`
+- Textos em português: `src/content/pt.js`
+- Textos em inglês: `src/content/en.js`
+- Telefone, e-mail, endereço e redes sociais: `src/content/company.js`
+- Endereços das páginas e títulos de compartilhamento: `src/routes.js`
+- Fotos de cada lugar do site: `src/images.js`
+- Páginas: `src/pages/`
+- Partes repetidas (menu, rodapé, cards): `src/components/`
 - Cores e estilos: `src/styles.css`
-- Favicon, imagem de compartilhamento, `robots.txt`, `sitemap.xml` e `llms.txt`: `public/`
+- Favicon, imagem de compartilhamento, `robots.txt` e `llms.txt`: `public/`
+
+## Fotos
+
+Enquanto as fotos originais do site antigo não chegam, todos os lugares usam a foto dos punções com cortes diferentes. Para trocar, coloque o arquivo em `src/assets/`, importe em `src/images.js` e aponte a chave do lugar para ele.
+
+## Páginas geradas
+
+O `yarn build` cria um `index.html` para cada página (em português e em inglês), com título e descrição próprios, além do `sitemap.xml`. O `vercel.json` redireciona os endereços antigos do Wix (com acento e `/post/...`) para os novos.

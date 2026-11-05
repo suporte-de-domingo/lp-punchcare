@@ -1,0 +1,91 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/solu%C3%A7%C3%B5es",
+      "destination": "/solucoes",
+      "permanent": true
+    },
+    {
+      "source": "/not%C3%ADcias",
+      "destination": "/noticias",
+      "permanent": true
+    },
+    {
+      "source": "/pol%C3%ADtica-de-privacidade",
+      "destination": "/politica-de-privacidade",
+      "permanent": true
+    },
+    {
+      "source": "/termos-e-condi%C3%A7%C3%B5es",
+      "destination": "/termos-e-condicoes",
+      "permanent": true
+    },
+    {
+      "source": "/en/solu%C3%A7%C3%B5es",
+      "destination": "/en/solucoes",
+      "permanent": true
+    },
+    {
+      "source": "/en/not%C3%ADcias",
+      "destination": "/en/noticias",
+      "permanent": true
+    },
+    {
+      "source": "/en/pol%C3%ADtica-de-privacidade",
+      "destination": "/en/politica-de-privacidade",
+      "permanent": true
+    },
+    {
+      "source": "/en/termos-e-condi%C3%A7%C3%B5es",
+      "destination": "/en/termos-e-condicoes",
+      "permanent": true
+    },
+    {
+      "source": "/post/polimento-de-pun%C3%A7%C3%B5es",
+      "destination": "/noticias/polimento-de-puncoes",
+      "permanent": true
+    },
+    {
+      "source": "/post/5-sinais-de-que-est%C3%A1-na-hora-de-revisar-seus-pun%C3%A7%C3%B5es-e-matrizes",
+      "destination": "/noticias/5-sinais-para-revisar-puncoes-e-matrizes",
+      "permanent": true
+    },
+    {
+      "source": "/post/representa%C3%A7%C3%B5es-t%C3%A9cnicas-por-que-escolher-marcas-globais-faz-diferen%C3%A7a-no-seu-processo",
+      "destination": "/noticias/representacoes-tecnicas-marcas-globais",
+      "permanent": true
+    },
+    {
+      "source": "/post/como-o-dimensionamento-de-pun%C3%A7%C3%B5es-pode-evitar-preju%C3%ADzos-silenciosos-na-sua-produ%C3%A7%C3%A3o",
+      "destination": "/noticias/dimensionamento-de-puncoes-prejuizos-silenciosos",
+      "permanent": true
+    },
+    {
+      "source": "/post/por-que-o-polimento-t%C3%A9cnico-de-pun%C3%A7%C3%B5es-%C3%A9-essencial-para-a-qualidade-dos-seus-comprimidos",
+      "destination": "/noticias/polimento-tecnico-qualidade-dos-comprimidos",
+      "permanent": true
+    },
+    {
+      "source": "/en/post/5-signs-it-s-time-to-overhaul-your-punches-and-dies",
+      "destination": "/en/noticias/5-sinais-para-revisar-puncoes-e-matrizes",
+      "permanent": true
+    },
+    {
+      "source": "/en/post/technical-representations-why-choosing-global-brands-makes-a-difference-in-your-process",
+      "destination": "/en/noticias/representacoes-tecnicas-marcas-globais",
+      "permanent": true
+    },
+    {
+      "source": "/en/post/how-punch-sizing-can-prevent-silent-losses-in-your-production",
+      "destination": "/en/noticias/dimensionamento-de-puncoes-prejuizos-silenciosos",
+      "permanent": true
+    },
+    {
+      "source": "/en/post/why-is-technical-punch-polishing-essential-for-the-quality-of-your-tablets",
+      "destination": "/en/noticias/polimento-tecnico-qualidade-dos-comprimidos",
+      "permanent": true
+    }
+  ]
+}
