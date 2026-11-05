@@ -10,7 +10,7 @@ export function PageHeader({ eyebrow, title, children }) {
           {children}
         </div>
         <div className="page-header-mark" aria-hidden="true">
-          <Symbol size={220} ring="#FFFFFF" />
+          <Symbol size={170} ring="#FFFFFF" />
         </div>
       </div>
     </section>

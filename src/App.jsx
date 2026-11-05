@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { Home } from './pages/Home'
 import { Solutions } from './pages/Solutions'
@@ -10,42 +10,40 @@ import { Careers } from './pages/Careers'
 import { Legal } from './pages/Legal'
 import { NotFound } from './pages/NotFound'
 import { LanguageProvider } from './language'
-import { languages, paths } from './routes'
+import { languageFor, paths } from './routes'
+
+const pages = [
+  { path: paths.home, element: <Home /> },
+  { path: paths.solutions, element: <Solutions /> },
+  { path: paths.company, element: <Company /> },
+  { path: paths.news, element: <News /> },
+  { path: `${paths.news}/:slug`, element: <Post /> },
+  { path: paths.contact, element: <Contact /> },
+  { path: paths.careers, element: <Careers /> },
+  { path: paths.privacy, element: <Legal type="privacy" /> },
+  { path: paths.terms, element: <Legal type="terms" /> },
+]
+
+function Root() {
+  const { pathname } = useLocation()
+
+  return (
+    <LanguageProvider content={languageFor(pathname)}>
+      <Layout />
+    </LanguageProvider>
+  )
+}
 
 export function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {languages.map((content) => (
-          <Route
-            key={content.lang}
-            path={content.prefix || '/'}
-            element={
-              <LanguageProvider content={content}>
-                <Layout />
-              </LanguageProvider>
-            }
-          >
-            <Route index element={<Home />} />
-            <Route path={paths.solutions.slice(1)} element={<Solutions />} />
-            <Route path={paths.company.slice(1)} element={<Company />} />
-            <Route path={paths.news.slice(1)} element={<News />} />
-            <Route path={`${paths.news.slice(1)}/:slug`} element={<Post />} />
-            <Route path={paths.contact.slice(1)} element={<Contact />} />
-            <Route path={paths.careers.slice(1)} element={<Careers />} />
-            <Route path={paths.privacy.slice(1)} element={<Legal type="privacy" />} />
-            <Route path={paths.terms.slice(1)} element={<Legal type="terms" />} />
-            {content.prefix && <Route path="*" element={<NotFound />} />}
-          </Route>
-        ))}
-        <Route
-          path="*"
-          element={
-            <LanguageProvider content={languages[0]}>
-              <Layout />
-            </LanguageProvider>
-          }
-        >
+        <Route element={<Root />}>
+          {['', '/en'].flatMap((prefix) =>
+            pages.map((page) => (
+              <Route key={prefix + page.path} path={page.path === '/' ? prefix || '/' : prefix + page.path} element={page.element} />
+            )),
+          )}
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
