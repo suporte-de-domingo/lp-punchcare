@@ -42,3 +42,17 @@ export function TabletsDrawing() {
     </svg>
   )
 }
+
+export function TrainingDrawing() {
+  return (
+    <svg className="drawing" viewBox="0 0 360 200" aria-hidden="true">
+      <path className="draw" pathLength="1" d="M40 20V170H330" />
+      <path className="centerline" d="M40 70H330M40 130H330" />
+      <path className="draw draw-accent" pathLength="1" d="M50 112L90 96L130 104L170 84L210 92L250 78L290 86L320 74" />
+      <circle className="draw" pathLength="1" cx="170" cy="84" r="5" />
+      <circle className="draw" pathLength="1" cx="250" cy="78" r="5" />
+      <text x="290" y="64">+0,02</text>
+      <text x="290" y="148">−0,02</text>
+    </svg>
+  )
+}
