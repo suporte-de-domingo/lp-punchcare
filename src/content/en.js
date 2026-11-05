@@ -1,8 +1,9 @@
 export const en = {
   lang: 'en',
   prefix: '/en',
-  switchLabel: 'Português',
-  switchShort: 'PT',
+  code: 'EN',
+  languageName: 'English',
+  languageLabel: 'Language',
   nav: {
     home: 'Home',
     solutions: 'Solutions',
