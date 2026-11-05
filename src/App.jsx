@@ -34,19 +34,25 @@ function Root() {
   )
 }
 
+export function AppRoutes() {
+  return (
+    <Routes>
+      <Route element={<Root />}>
+        {['', '/en'].flatMap((prefix) =>
+          pages.map((page) => (
+            <Route key={prefix + page.path} path={page.path === '/' ? prefix || '/' : prefix + page.path} element={page.element} />
+          )),
+        )}
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
+  )
+}
+
 export function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route element={<Root />}>
-          {['', '/en'].flatMap((prefix) =>
-            pages.map((page) => (
-              <Route key={prefix + page.path} path={page.path === '/' ? prefix || '/' : prefix + page.path} element={page.element} />
-            )),
-          )}
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
+      <AppRoutes />
     </BrowserRouter>
   )
 }
