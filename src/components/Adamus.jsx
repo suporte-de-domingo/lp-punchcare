@@ -1,6 +1,6 @@
 import { Photo } from './Photo'
 import { Reveal } from './Reveal'
-import { images } from '../images'
+import { adamusLogo, images } from '../images'
 import { company } from '../content/company'
 
 export function Adamus({ title, text, note }) {
@@ -11,7 +11,7 @@ export function Adamus({ title, text, note }) {
           <h2>{title}</h2>
           <p className="lead">{text}</p>
           <a className="adamus" href={company.adamus} target="_blank" rel="noreferrer">
-            <span className="adamus-name">ADAMUS</span>
+            <img className="adamus-logo" src={adamusLogo} alt="Adamus S.A." width="600" height="178" loading="lazy" />
             <span className="adamus-note">{note}</span>
           </a>
         </Reveal>

@@ -43,7 +43,7 @@ Para publicar em outro endereço durante a validação, defina `VITE_SITE_URL` n
 
 ## Fotos
 
-Enquanto as fotos originais do site antigo não chegam, todos os lugares usam a foto dos punções com cortes diferentes. Para trocar, coloque o arquivo em `src/assets/`, importe em `src/images.js` e aponte a chave do lugar para ele.
+As fotos são as do site antigo, otimizadas em WebP (800 e 1600 px) em `src/assets/photos/`. Para trocar uma foto, substitua o arquivo com o mesmo nome ou aponte a chave em `src/images.js` para outro arquivo. O vídeo do artigo "Polimento de punções" fica em `public/videos/`.
 
 ## Páginas geradas
 
