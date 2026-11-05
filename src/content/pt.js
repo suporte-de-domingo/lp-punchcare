@@ -13,6 +13,7 @@ export const pt = {
     quote: 'Peça um orçamento',
     openMenu: 'Abrir menu',
     closeMenu: 'Fechar menu',
+    mainMenu: 'Menu principal',
   },
   home: {
     title: 'Soluções em ferramentais para a indústria farmacêutica',
@@ -184,6 +185,8 @@ export const pt = {
     newsletterSubject: 'Quero receber as novidades da Punch Care',
     zip: 'CEP',
     credit: 'Site por',
+    legal: 'Informações legais',
+    social: 'Redes sociais',
   },
   privacy: {
     title: 'Política de Privacidade',

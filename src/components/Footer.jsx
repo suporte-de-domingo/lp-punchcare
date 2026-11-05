@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Logo } from './Logo'
+import { WhatsAppButton } from './WhatsAppButton'
 import { useLanguage } from '../language'
 import { paths } from '../routes'
 import { company, mailtoLink } from '../content/company'
@@ -53,7 +54,7 @@ export function Footer() {
           </a>
         </address>
 
-        <nav className="footer-social" aria-label="Redes sociais">
+        <nav className="footer-social" aria-label={t.footer.social}>
           {company.social.map((item) => (
             <a key={item.name} href={item.href} target="_blank" rel="noreferrer">
               {item.name}
@@ -64,7 +65,7 @@ export function Footer() {
 
       <div className="container footer-bottom">
         <p>© {new Date().getFullYear()} {company.legalName}</p>
-        <nav className="footer-links">
+        <nav className="footer-links" aria-label={t.footer.legal}>
           <Link to={to(paths.privacy)}>{t.footer.privacy}</Link>
           <Link to={to(paths.terms)}>{t.footer.terms}</Link>
         </nav>
@@ -75,6 +76,7 @@ export function Footer() {
           </a>
         </p>
       </div>
+      <WhatsAppButton />
     </footer>
   )
 }
