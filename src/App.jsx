@@ -1,6 +1,7 @@
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Pillars } from './components/Pillars'
+import { Tooling } from './components/Tooling'
 import { Services } from './components/Services'
 import { About } from './components/About'
 import { PunchControl } from './components/PunchControl'
@@ -14,6 +15,7 @@ export function App() {
       <main>
         <Hero />
         <Pillars />
+        <Tooling />
         <Services />
         <About />
         <PunchControl />
