@@ -16,6 +16,10 @@ export const paths = {
 
 export const postPath = (slug) => `${paths.news}/${slug}`
 
+export const languageFor = (pathname) => (/^\/en(\/|$)/.test(pathname) ? en : pt)
+
+export const basePath = (pathname) => pathname.replace(/^\/en(?=\/|$)/, '') || '/'
+
 export const localize = (content, path) => (path === '/' ? content.prefix || '/' : `${content.prefix}${path}`)
 
 export function pageList(content) {

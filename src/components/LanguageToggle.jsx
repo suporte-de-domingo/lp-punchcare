@@ -1,12 +1,12 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useLanguage } from '../language'
-import { languages, localize, paths } from '../routes'
+import { basePath, languages, localize, paths } from '../routes'
 
 function pathFor(content, pathname) {
-  const basePath = pathname.replace(/^\/en(?=\/|$)/, '') || '/'
-  const slug = basePath.startsWith(`${paths.news}/`) && basePath.slice(paths.news.length + 1)
+  const base = basePath(pathname)
+  const slug = base.startsWith(`${paths.news}/`) && base.slice(paths.news.length + 1)
   const translated = !slug || content.posts.some((post) => post.slug === slug)
-  return localize(content, translated ? basePath : paths.news)
+  return localize(content, translated ? base : paths.news)
 }
 
 export function LanguageToggle() {
