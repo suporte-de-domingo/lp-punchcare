@@ -13,7 +13,6 @@ export const menu = [
   { label: 'Início', href: '#inicio' },
   { label: 'Sobre', href: '#sobre' },
   { label: 'Serviços', href: '#servicos' },
-  { label: 'Punch Control', href: '#punch-control' },
   { label: 'Contato', href: '#contato' },
 ]
 
@@ -42,7 +41,7 @@ export const services = [
     items: [
       'Comprimento total, de trabalho e da cabeça',
       'Comparação com a tolerância do seu jogo',
-      'Relatório em PDF e registro no Punch Control',
+      'Relatório em PDF de cada peça',
     ],
     focus: '50% 30%',
   },
@@ -70,11 +69,4 @@ export const values = [
   { title: 'Missão', text: 'Prolongar a vida útil do ferramental e dar segurança à produção dos nossos clientes.' },
   { title: 'Visão', text: 'Ser referência em cuidado de ferramental de compressão no Brasil.' },
   { title: 'Valores', text: 'Precisão, transparência, compromisso com prazos e respeito ao cliente.' },
-]
-
-export const features = [
-  { title: 'Produção no tablet', text: 'O mecânico inicia o lote, registra as medições de cada hora e encerra passo a passo.' },
-  { title: 'Vida útil e previsão', text: 'Os kg de cada lote descontam a vida útil, e o sistema avisa antes do limite.' },
-  { title: 'Controle dimensional', text: 'Medidas com faixa aceita por jogo. Valor fora da faixa abre uma ocorrência.' },
-  { title: 'Rastreabilidade', text: 'Histórico de cada jogo com data e responsável, e relatórios para auditoria.' },
 ]

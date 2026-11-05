@@ -4,7 +4,6 @@ import { Pillars } from './components/Pillars'
 import { Tooling } from './components/Tooling'
 import { Services } from './components/Services'
 import { About } from './components/About'
-import { PunchControl } from './components/PunchControl'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
 
@@ -18,7 +17,6 @@ export function App() {
         <Tooling />
         <Services />
         <About />
-        <PunchControl />
         <Contact />
       </main>
       <Footer />

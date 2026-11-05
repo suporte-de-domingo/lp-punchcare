@@ -64,7 +64,6 @@ export function Contact() {
               <option>Polimento</option>
               <option>Dimensionamento</option>
               <option>Representação técnica</option>
-              <option>Punch Control</option>
             </select>
           </label>
           <label>
