@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Logo } from './Logo'
+import { LanguageToggle } from './LanguageToggle'
 import { useLanguage } from '../language'
-import { languages, paths } from '../routes'
+import { paths } from '../routes'
 
 export function Header() {
   const { t, to } = useLanguage()
@@ -26,13 +27,6 @@ export function Header() {
     { label: t.nav.news, path: paths.news },
     { label: t.nav.contact, path: paths.contact },
   ]
-
-  const other = languages.find((content) => content !== t)
-  const basePath = pathname.replace(/^\/en(?=\/|$)/, '') || '/'
-  const slug = basePath.startsWith(`${paths.news}/`) && basePath.slice(paths.news.length + 1)
-  const translated = !slug || other.posts.some((post) => post.slug === slug)
-  const otherPath = translated ? basePath : paths.news
-  const otherLanguage = otherPath === '/' ? other.prefix || '/' : `${other.prefix}${otherPath}`
 
   return (
     <header className={scrolled || open ? 'header header-solid' : 'header'}>
@@ -59,9 +53,7 @@ export function Header() {
               {item.label}
             </NavLink>
           ))}
-          <Link className="language" to={otherLanguage} hrefLang={other.lang} title={t.switchLabel}>
-            {t.switchShort}
-          </Link>
+          <LanguageToggle />
           <Link className="button button-small" to={to(paths.contact)}>
             {t.nav.quote}
           </Link>

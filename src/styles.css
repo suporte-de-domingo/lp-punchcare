@@ -314,7 +314,7 @@ p {
   color: var(--navy);
 }
 
-.menu a:not(.button, .language)::after {
+.menu a:not(.button, .language-option)::after {
   content: '';
   position: absolute;
   left: 0;
@@ -327,7 +327,7 @@ p {
   transition: transform 0.3s var(--ease);
 }
 
-.menu a:not(.button, .language):hover::after,
+.menu a:not(.button, .language-option):hover::after,
 .menu a.active::after {
   transform: scaleX(1);
 }
@@ -336,21 +336,41 @@ p {
   color: var(--flame);
 }
 
-.language {
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px 3px 3px 10px;
   border: 1px solid var(--line);
-  border-radius: 50%;
-  font-size: 13px;
-  font-weight: 600;
-  transition: border-color 0.2s, background 0.2s;
+  border-radius: 999px;
 }
 
-.language:hover {
-  border-color: var(--navy);
+.language-icon {
+  margin-right: 4px;
+  fill: none;
+  stroke: var(--steel);
+  stroke-width: 1.6;
+}
+
+.menu .language-toggle .language-option {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--steel);
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu .language-toggle .language-option:hover {
+  color: var(--navy);
   background: var(--ice);
+}
+
+.menu .language-toggle .language-option-active,
+.menu .language-toggle .language-option-active:hover {
+  color: var(--white);
+  background: var(--navy);
 }
 
 .menu-button {
@@ -1189,17 +1209,18 @@ p {
     transform: none;
   }
 
-  .menu a:not(.button, .language) {
+  .menu a:not(.button, .language-option) {
     padding: 14px 0;
     border-bottom: 1px solid var(--line);
     font-size: 18px;
   }
 
-  .menu a:not(.button, .language)::after {
+  .menu a:not(.button, .language-option)::after {
     display: none;
   }
 
-  .menu .language {
+  .menu .language-toggle {
+    align-self: flex-start;
     margin-top: 20px;
   }
 
