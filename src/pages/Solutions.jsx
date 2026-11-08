@@ -1,11 +1,11 @@
 import { PageHeader } from '../components/PageHeader'
 import { Photo } from '../components/Photo'
 import { Reveal } from '../components/Reveal'
-import { DieDrawing, PunchDrawing, TabletsDrawing, TrainingDrawing } from '../components/Drawings'
+import { DieDrawing, PunchDrawing, ToolingSetDrawing, TrainingDrawing } from '../components/Drawings'
 import { useLanguage } from '../language'
 import { images } from '../images'
 
-const drawings = [PunchDrawing, DieDrawing, TrainingDrawing, TabletsDrawing]
+const drawings = [PunchDrawing, DieDrawing, TrainingDrawing, ToolingSetDrawing]
 
 export function Solutions() {
   const { t } = useLanguage()

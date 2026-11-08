@@ -3,12 +3,12 @@ import { Photo } from '../components/Photo'
 import { Reveal } from '../components/Reveal'
 import { PostCard } from '../components/PostCard'
 import { Adamus } from '../components/Adamus'
-import { DieDrawing, PunchDrawing, TabletsDrawing } from '../components/Drawings'
+import { DieDrawing, PunchDrawing, ToolingSetDrawing } from '../components/Drawings'
 import { useLanguage } from '../language'
 import { images } from '../images'
 import { paths } from '../routes'
 
-const drawings = [PunchDrawing, DieDrawing, TabletsDrawing]
+const drawings = [PunchDrawing, DieDrawing, ToolingSetDrawing]
 
 export function Home() {
   const { t, to } = useLanguage()

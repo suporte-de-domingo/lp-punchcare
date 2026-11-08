@@ -311,7 +311,7 @@ export const pt = {
     },
     {
       slug: 'representacoes-tecnicas-marcas-globais',
-      image: 'postRepresentation',
+      image: 'punchesAndDies',
       title: 'Representações técnicas: por que escolher marcas globais faz diferença no seu processo',
       date: '8 de mai. de 2025',
       updated: '10 de dez. de 2025',
@@ -327,7 +327,7 @@ export const pt = {
     },
     {
       slug: 'dimensionamento-de-puncoes-prejuizos-silenciosos',
-      image: 'postSizing',
+      image: 'van',
       title: 'Como o dimensionamento de punções pode evitar prejuízos silenciosos na sua produção',
       date: '8 de mai. de 2025',
       updated: '6 de jan.',

@@ -16,7 +16,7 @@ export function Adamus({ title, text, note }) {
           </a>
         </Reveal>
         <Reveal delay={150}>
-          <Photo image={images.conveyor} alt="" className="split-photo" />
+          <Photo image={images.punchRow} alt="" className="split-photo" />
         </Reveal>
       </div>
     </section>
