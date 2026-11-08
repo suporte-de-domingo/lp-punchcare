@@ -619,6 +619,27 @@ p {
   transition: opacity 0.6s 0.8s;
 }
 
+.drawing pattern path {
+  stroke: var(--steel);
+  stroke-width: 0.8;
+}
+
+.drawing .halo {
+  paint-order: stroke;
+  stroke: var(--white);
+  stroke-width: 4px;
+}
+
+.drawing .hatch {
+  stroke: none;
+  opacity: 0;
+  transition: opacity 0.6s 1s;
+}
+
+.is-visible .hatch {
+  opacity: 0.55;
+}
+
 .drawing text {
   font: 500 11px var(--text);
   fill: var(--steel);
@@ -1319,6 +1340,10 @@ p {
 }
 
 @media (max-width: 640px) {
+  .drawing text {
+    font-size: 13px;
+  }
+
   body {
     font-size: 16px;
   }
@@ -1384,6 +1409,7 @@ p {
   }
 
   .drawing text,
+  .drawing .hatch,
   .drawing .centerline {
     opacity: 1;
   }
