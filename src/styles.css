@@ -247,19 +247,8 @@ p {
 
 .logo {
   display: block;
-  width: 228px;
+  width: auto;
   height: 44px;
-  overflow: visible;
-}
-
-.logo-name {
-  font: 800 18px var(--title);
-  letter-spacing: 0.04em;
-}
-
-.logo-tagline {
-  font: 600 7px var(--title);
-  letter-spacing: 0.28em;
 }
 
 .header {
@@ -282,6 +271,10 @@ p {
   justify-content: space-between;
   gap: 24px;
   height: calc(var(--header) - 1px);
+}
+
+.footer-brand .logo {
+  height: 56px;
 }
 
 .header-logo {
