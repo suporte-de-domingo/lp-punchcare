@@ -77,6 +77,9 @@ export const en = {
     applicationsTitle: 'Applications / Supported Equipment',
     applicationsText:
       'Our solutions are applied across a wide range of equipment and components in the pharmaceutical and nutraceutical industries.',
+    galleryLabel: 'Punch and die gallery',
+    galleryPause: 'Pause gallery',
+    galleryPlay: 'Play gallery',
     applications: [
       { title: 'Punches and Dies', text: 'Reconditioning and supply for all types and brands of tablet presses.' },
       { title: 'Tablet Press Turrets and Rotors', text: 'Adjustments and consulting to achieve greater stability and efficiency.' },

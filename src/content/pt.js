@@ -77,6 +77,9 @@ export const pt = {
     applicationsTitle: 'Aplicações / Equipamentos Atendidos',
     applicationsText:
       'Nossas soluções são aplicadas em diversos equipamentos e componentes da indústria farmacêutica e nutracêutica.',
+    galleryLabel: 'Galeria de punções e matrizes',
+    galleryPause: 'Pausar galeria',
+    galleryPlay: 'Retomar galeria',
     applications: [
       { title: 'Punções e Matrizes', text: 'Recondicionamento e fornecimento para todos os tipos e marcas de compressoras.' },
       { title: 'Torres e Rotores de Compressoras', text: 'Ajustes e consultoria para maior estabilidade e eficiência.' },
