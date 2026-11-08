@@ -68,7 +68,7 @@ export function Company() {
             ))}
           </Reveal>
           <Reveal delay={150}>
-            <Photo image={images.conveyorLine} alt="" className="split-photo" />
+            <Photo image={images.van} alt="" className="split-photo" />
           </Reveal>
         </div>
       </section>

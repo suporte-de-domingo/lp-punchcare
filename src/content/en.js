@@ -295,7 +295,7 @@ export const en = {
     },
     {
       slug: 'representacoes-tecnicas-marcas-globais',
-      image: 'postRepresentation',
+      image: 'punchesAndDies',
       title: 'Technical representation: why choosing global brands makes a difference in your process',
       date: 'May 8, 2025',
       updated: 'Jan 15',
@@ -311,7 +311,7 @@ export const en = {
     },
     {
       slug: 'dimensionamento-de-puncoes-prejuizos-silenciosos',
-      image: 'postSizing',
+      image: 'van',
       title: 'How punch sizing can prevent hidden losses in your production',
       date: 'May 8, 2025',
       updated: 'Jan 22',

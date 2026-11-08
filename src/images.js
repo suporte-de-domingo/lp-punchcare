@@ -16,16 +16,15 @@ const photo = (name, focus = 'center') => {
 export { adamusLogo }
 
 export const images = {
-  hero: photo('hero', '60% 50%'),
+  hero: photo('punch-set', '40% 50%'),
   pills: photo('pills-container'),
   punchesDetail: photo('punch', 'center 35%'),
   punchesCoatings: photo('coated-punches'),
-  conveyor: photo('conveyor'),
+  punchRow: photo('gallery-11'),
+  punchesAndDies: photo('gallery-10'),
   tabletsYellow: photo('tablets-yellow'),
-  conveyorLine: photo('conveyor-line'),
+  van: photo('van', '62% 60%'),
   postPolishingVideo: photo('post-polishing-video'),
-  postRepresentation: photo('post-representation'),
-  postSizing: photo('post-sizing'),
   postPolishing: photo('post-polishing'),
   gallery: ['01', '02', '03', '04', '05', '07', '08', '09', '10', '11'].map((number) => photo(`gallery-${number}`)),
 }
