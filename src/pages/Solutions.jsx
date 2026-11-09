@@ -1,5 +1,5 @@
 import { PageHeader } from '../components/PageHeader'
-import { Photo } from '../components/Photo'
+import { Carousel } from '../components/Carousel'
 import { Reveal } from '../components/Reveal'
 import { DieDrawing, PunchDrawing, ToolingSetDrawing, TrainingDrawing } from '../components/Drawings'
 import { useLanguage } from '../language'
@@ -51,14 +51,15 @@ export function Solutions() {
               </Reveal>
             ))}
           </ol>
-          <div className="gallery">
-            {images.gallery.map((image, index) => (
-              <Reveal key={index} delay={(index % 5) * 100}>
-                <Photo image={image} alt="" className="gallery-photo" sizes="(max-width: 640px) 50vw, 240px" />
-              </Reveal>
-            ))}
-          </div>
         </div>
+        <Reveal className="carousel-reveal">
+          <Carousel
+            images={images.gallery}
+            label={page.galleryLabel}
+            pauseLabel={page.galleryPause}
+            playLabel={page.galleryPlay}
+          />
+        </Reveal>
       </section>
     </>
   )

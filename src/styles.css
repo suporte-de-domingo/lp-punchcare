@@ -780,20 +780,79 @@ p {
   font-size: 16px;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
+.carousel-reveal {
   margin-top: 72px;
 }
 
-.gallery-photo {
+.carousel-viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.carousel-viewport:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 4px;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: carousel 60s linear infinite;
+}
+
+.carousel-viewport:hover .carousel-track,
+.carousel-viewport:focus-within .carousel-track,
+.carousel-paused .carousel-track {
+  animation-play-state: paused;
+}
+
+.carousel-list {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0 16px 0 0;
+  list-style: none;
+}
+
+.carousel-photo {
+  width: 260px;
   aspect-ratio: 1;
   border-radius: var(--radius);
 }
 
-.gallery-photo:hover .photo {
+.carousel-photo:hover .photo {
   scale: 1.06;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.carousel-toggle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--white);
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.carousel-toggle:hover {
+  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes carousel {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .numbers {
@@ -1352,8 +1411,12 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .gallery {
-    grid-template-columns: 1fr 1fr;
+  .carousel-photo {
+    width: 180px;
+  }
+
+  .carousel-reveal {
+    margin-top: 48px;
   }
 
   .statement-photo:last-child {
@@ -1395,6 +1458,20 @@ p {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+
+  .carousel-viewport {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .carousel-list li {
+    scroll-snap-align: start;
+  }
+
+  .carousel-list[aria-hidden],
+  .carousel-controls {
+    display: none;
   }
 
   .drawing .draw {
