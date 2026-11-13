@@ -33,8 +33,8 @@ export const en = {
         text: 'We restore surfaces by reducing roughness, thereby minimizing the risk of sticking and capping.',
       },
       {
-        title: 'Punch and Die Measurement',
-        text: 'We provide measurement services that help identify deviations that may impact the quality of your product, such as weight, hardness, capping, and others.',
+        title: 'Punch and Die Sizing',
+        text: 'We provide sizing services that identify deviations that may affect the quality of your product, such as weight, hardness, and capping.',
       },
       {
         title: 'Specialized Technical Representation',
@@ -42,16 +42,16 @@ export const en = {
       },
     ],
     workMore: 'Learn more',
-    newsTitle: 'Company News',
+    newsTitle: 'Company news',
     newsMore: 'Read all',
     adamusTitle: 'We trust those who invest in technology and innovation!',
     adamusText:
-      'Punch Care is the exclusive representative of Adamus S.A., widely recognized as one of the world’s leading manufacturers for excellence in technology and precision in the production of tooling and equipment for the pharmaceutical and nutraceutical industries.',
+      'Punch Care is the exclusive representative of Adamus S.A., widely recognized as one of the world’s leading manufacturers for its excellence in technology and precision in the production of tooling and equipment for the pharmaceutical and nutraceutical industries.',
     adamusNote:
       'The largest manufacturer of punches and dies in Poland and one of the largest in the world. State-of-the-art technology, exceptionally high precision standards, and innovation in tooling design for tablet compression.',
   },
   solutions: {
-    eyebrow: 'Tooling Solutions for Tablet Compression',
+    eyebrow: 'Tooling solutions for tablet compression',
     title: 'Specialists in performance, durability, and precision.',
     servicesTitle: 'Services',
     servicesText:
@@ -59,7 +59,7 @@ export const en = {
     services: [
       {
         title: 'Technical Polishing of Punches and Dies',
-        text: 'We enhance surface finishing, preventing issues such as sticking and capping, and avoiding jamming.',
+        text: 'We improve surface finish, preventing issues such as sticking and capping and avoiding jamming.',
       },
       {
         title: 'Dimensional Sizing and Control',
@@ -77,7 +77,7 @@ export const en = {
     applicationsTitle: 'Applications / Supported Equipment',
     applicationsText:
       'Our solutions are applied across a wide range of equipment and components in the pharmaceutical and nutraceutical industries.',
-    galleryLabel: 'Punch and die gallery',
+    galleryLabel: 'Tooling and equipment gallery',
     galleryPause: 'Pause gallery',
     galleryPlay: 'Play gallery',
     applications: [
@@ -85,11 +85,11 @@ export const en = {
       { title: 'Tablet Press Turrets and Rotors', text: 'Adjustments and consulting to achieve greater stability and efficiency.' },
       {
         title: 'Auxiliary Equipment',
-        text: 'Cabinets for punches, polishing machines, dimensional measuring devices, and ultrasonic washers.',
+        text: 'Cabinets for punches, polishing machines, dimensional measuring devices, and ultrasonic cleaners.',
       },
       {
         title: 'Technical Parts for Tablet Presses',
-        text: 'We support requirements for specific parts such as extraction cams, filling cams, and compression rollers.',
+        text: 'We support requirements for specific parts, such as ejection cams, fill cams, and compression rollers.',
       },
     ],
   },
@@ -100,16 +100,16 @@ export const en = {
     philosophyLead: 'More than maintenance. We are partners in your productivity.',
     philosophy: [
       'At Punch Care, we believe that technical excellence and commitment are the pillars for building consistent results. Since 2017, we have focused on the polishing and sizing of punches and dies, always striving to improve processes, reduce failures, and enhance the performance of tablet compression lines.',
-      'Our differentiation lies in the combination of deep technical expertise and strategic partnerships with international brands. We do not deliver services alone, we deliver trust, precision, and continuous improvement to the Brazilian pharmaceutical and nutraceutical industries.',
+      'Our differentiation lies in the combination of deep technical expertise and strategic partnerships with international brands. We do not just deliver services: we deliver trust, precision, and continuous improvement to the Brazilian pharmaceutical and nutraceutical industries.',
     ],
-    historyTitle: 'Our Journey',
+    historyTitle: 'Our journey',
     historyLead: 'A story built on expertise and purpose.',
     history: [
       'Punch Care was founded by Oberto Oliveira, a professional with more than 30 years of experience in the pharmaceutical sector and one of the pioneers in Brazil in punch and die service life management.',
       'With a technical background and hands-on experience in tooling and project design, Oberto brought an innovative perspective on tooling maintenance and performance. Over the years, we have consolidated our position through highly specialized services, technical consulting, training, and the representation of leading brands such as Adamus.',
       'Today, we remain committed to being the first choice for industries that value quality, agility, and genuine expertise.',
     ],
-    numbersTitle: 'Trust in our experience:',
+    numbersTitle: 'Trust our experience:',
     numbersText:
       'We have built our journey on technical expertise, professionalism, and a strong commitment to the pharmaceutical industry.',
     numbers: [
@@ -134,12 +134,12 @@ export const en = {
     title: 'Request dedicated support for your specific needs. We are ready to assist you.',
     formTitle: 'Fill out the form below and we will get in touch as soon as possible.',
     fields: {
-      firstName: 'First Name',
-      lastName: 'Last Name',
+      firstName: 'First name',
+      lastName: 'Last name',
       company: 'Company',
       email: 'Email',
       phone: 'Phone',
-      address: 'Company Address',
+      address: 'Company address',
       intent: 'Do you want to buy or sell materials?',
       buy: 'Buy',
       sell: 'Sell',
@@ -152,24 +152,24 @@ export const en = {
     submit: 'Request a quote',
     submitEmail: 'Send by email',
     messageIntro: 'Hello! I would like a quote.',
-    supportTitle: 'Personalized Support',
+    supportTitle: 'Personalized support',
     supportText:
       'Contact us by phone, email, or WhatsApp. Our team is ready to provide the technical support you need.',
     addressTitle: 'Address',
-    emailTitle: 'E-mail',
-    hoursTitle: 'Business Hours',
-    hours: ['Monday - Friday:', '8:00 AM - 5:00 PM'],
-    phoneTitle: 'Phone | WhatsApp',
+    emailTitle: 'Email',
+    hoursTitle: 'Business hours',
+    hours: ['Monday to Friday', '8 AM to 5 PM'],
+    phoneTitle: 'Phone and WhatsApp',
   },
   careers: {
-    title: 'Commitment, knowledge and passion for what we do.',
+    title: 'Commitment, knowledge, and passion for what we do.',
     lead: 'Our team is the foundation of our excellence.',
     valuesTitle: 'Our values move us',
     values:
-      'At Punch Care, we act with ethics, responsibility and precision in everything we do. We value trust, respect between people and commitment to quality at every stage of our work.',
-    cultureTitle: 'Our Culture',
+      'At Punch Care, we act with ethics, responsibility, and precision in everything we do. We value trust, respect between people, and commitment to quality at every stage of our work.',
+    cultureTitle: 'Our culture',
     culture:
-      'We are a technical team, passionate about challenges and driven by the constant search for intelligent solutions for the pharmaceutical industry. We invest in knowledge, evolve with experience and cultivate a collaborative environment focused on results.',
+      'We are a technical team, passionate about challenges and driven by the constant search for intelligent solutions for the pharmaceutical industry. We invest in knowledge, evolve with experience, and cultivate a collaborative environment focused on results.',
     joinTitle: 'Join us',
     joinLead: 'Do you want to be part of the Punch Care team?',
     joinText:
@@ -205,10 +205,10 @@ export const en = {
         title: '2. Use of Information',
         text: ['The data provided will be used exclusively for:'],
         list: [
-          'Contact the user',
-          'Send quotations and requested materials',
-          'Personalize customer service',
-          'Share news and informational content, when authorized',
+          'Contacting the user',
+          'Sending quotations and requested materials',
+          'Personalizing customer service',
+          'Sharing news and informational content, when authorized',
         ],
       },
       {
@@ -305,9 +305,9 @@ export const en = {
       author: 'Punch Care',
       minutes: 1,
       excerpt:
-        'When it comes to pharmaceutical manufacturing, every detail matters—especially the origin and quality of the tooling used.',
+        'When it comes to pharmaceutical manufacturing, every detail matters, especially the origin and quality of the tooling used.',
       body: [
-        'When it comes to pharmaceutical manufacturing, every detail matters—especially the origin and quality of the tooling used. We are proud to represent Adamus S.A. in Brazil, one of the world’s leading manufacturers of compression tooling and spare parts for the pharmaceutical industry.',
+        'When it comes to pharmaceutical manufacturing, every detail matters, especially the origin and quality of the tooling used. We are proud to represent Adamus S.A. in Brazil, one of the world’s leading manufacturers of compression tooling and spare parts for the pharmaceutical industry.',
         'With more than 40 years of experience, Adamus stands out for its high-quality customer support and service. Its processes are carried out using robotic technologies operating with CAD/CAM systems. Product and service excellence is ensured by a highly qualified team working in compliance with ISO 9001:2015 and ISO 13485:2016 Quality Management Systems.',
       ],
       adamus: true,
@@ -326,7 +326,7 @@ export const en = {
         'Differences in punch height can cause deviations in tablet weight and/or hardness, potentially leading to the loss of an entire product batch.',
         'With the technical sizing service offered by Punch Care, it is possible to identify millimetric deviations before they become a real problem.',
         'We use high-precision measurement technology to ensure your tooling consistently meets ideal compression parameters.',
-        'Sizing is not an expense, it is an investment in productivity, safety, and standardization.',
+        'Sizing is not an expense: it is an investment in productivity, safety, and standardization.',
       ],
     },
     {
@@ -339,9 +339,9 @@ export const en = {
       minutes: 1,
       excerpt: 'Issues such as sticking, capping, and variations in tablet weight are clear signs of tooling wear.',
       body: [
-        'Issues such as sticking, capping, and variations in tablet weight are clear signs of tooling wear. Technical polishing of punches and dies goes far beyond aesthetics—it is a fundamental step to ensure tablet integrity, extend tooling lifespan, and reduce production failures.',
-        'At Punch Care, we use automated polishing processes and advanced techniques to restore surfaces to the ideal finish for high performance—all with complete traceability and dimensional accuracy.',
-        'Avoid unexpected downtime and operational losses with truly effective preventative maintenance.',
+        'Issues such as sticking, capping, and variations in tablet weight are clear signs of tooling wear. Technical polishing of punches and dies goes far beyond aesthetics: it is a fundamental step to ensure tablet integrity, extend tooling lifespan, and reduce production failures.',
+        'At Punch Care, we use automated polishing processes and advanced techniques to restore surfaces to the ideal finish for high performance, with complete traceability and dimensional accuracy.',
+        'Avoid unexpected downtime and operational losses with truly effective preventive maintenance.',
       ],
     },
   ],

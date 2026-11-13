@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="36 60 640 390" width="1280" height="780">
+  <title>Polimento de Punções e Matrizes</title>
+  <style>
+    svg { background: #ffffff; }
+    .p  { fill: none; stroke: #012D48; stroke-width: 2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    .t  { fill: none; stroke: #012D48; stroke-width: 1.1; vector-effect: non-scaling-stroke; }
+    .c  { fill: none; stroke: #012D48; stroke-width: 1; stroke-dasharray: 14 4 2 4; }
+    .d  { fill: none; stroke: #012D48; stroke-width: 1; }
+    .acc { stroke: #F07D00; }
+    text { font-family: "Consolas", "Courier New", monospace; fill: #012D48; letter-spacing: 2px; }
+    .lbl { font-size: 15px; }
+    .sm  { font-size: 12px; letter-spacing: 1.5px; }
+    .big { font-size: 22px; font-weight: bold; }
+    .or  { fill: #F07D00; }
+  </style>
+
+  <defs>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#012D48" stroke-width="1" opacity=".45"/>
+    </pattern>
+    <clipPath id="lente"><circle cx="240" cy="330" r="100"/></clipPath>
+    <!-- frente de polimento: à esquerda fica liso, à direita ainda rugoso -->
+    <clipPath id="liso">
+      <rect x="140" y="220" width="0" height="220">
+        <animate attributeName="width" dur="6s" repeatCount="indefinite"
+                 values="0;200;200;0" keyTimes="0;0.58;0.92;1"/>
+      </rect>
+    </clipPath>
+    <clipPath id="rugoso">
+      <rect x="140" y="220" width="220" height="220">
+        <animate attributeName="x" dur="6s" repeatCount="indefinite"
+                 values="140;340;340;140" keyTimes="0;0.58;0.92;1"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <!-- ===== Ponta montada de feltro (Ø menor que a ponta da punção) ===== -->
+  <clipPath id="feltro"><rect x="160" y="110" width="29" height="20" rx="5"/></clipPath>
+  <g>
+    <!-- leve vai e vem contra a face -->
+    <animateTransform attributeName="transform" type="translate" dur="1.6s" repeatCount="indefinite"
+      values="0 0; -3 0; 0 0" keyTimes="0;0.5;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+    <!-- mandril / porta-ferramenta -->
+    <path class="p" d="M70,111 L104,111 L112,116 L112,124 L104,129 L70,129"/>
+    <line x1="96" y1="111" x2="96" y2="129" class="t"/>
+    <line x1="88" y1="111" x2="88" y2="129" class="t"/>
+    <!-- haste -->
+    <rect x="112" y="118" width="48" height="4" class="p"/>
+    <!-- feltro -->
+    <rect x="160" y="110" width="29" height="20" rx="5" fill="#F3E3CF" stroke="none"/>
+    <g clip-path="url(#feltro)" stroke="#B9895A" stroke-width="1.1" stroke-linecap="round">
+      <g>
+        <line x1="164" y1="104" x2="164" y2="108"/><line x1="170" y1="100" x2="170" y2="105"/>
+        <line x1="176" y1="106" x2="176" y2="110"/><line x1="182" y1="101" x2="182" y2="105"/>
+        <line x1="186" y1="96" x2="186" y2="99"/>
+        <line x1="164" y1="114" x2="164" y2="118"/><line x1="170" y1="110" x2="170" y2="115"/>
+        <line x1="176" y1="116" x2="176" y2="120"/><line x1="182" y1="111" x2="182" y2="115"/>
+        <line x1="186" y1="106" x2="186" y2="109"/>
+        <line x1="164" y1="124" x2="164" y2="128"/><line x1="170" y1="120" x2="170" y2="125"/>
+        <line x1="176" y1="126" x2="176" y2="130"/><line x1="182" y1="121" x2="182" y2="125"/>
+        <line x1="186" y1="116" x2="186" y2="119"/>
+        <line x1="164" y1="134" x2="164" y2="138"/><line x1="170" y1="130" x2="170" y2="135"/>
+        <line x1="176" y1="136" x2="176" y2="140"/><line x1="182" y1="131" x2="182" y2="135"/>
+        <line x1="186" y1="126" x2="186" y2="129"/>
+        <!-- giro: as fibras correm na vertical -->
+        <animateTransform attributeName="transform" type="translate" from="0 0" to="0 10" dur="0.25s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <rect x="160" y="110" width="29" height="20" rx="5" class="p"/>
+  </g>
+  <!-- seta de rotação em volta da haste -->
+  <path d="M128,108 A6 12 0 1 1 128,132" class="d acc" stroke-width="1.4"/>
+  <path d="M124,129 L128,132 L124,135" class="d acc" stroke-width="1.4"/>
+
+  <!-- ===== Punção (vista lateral, da figura original) ===== -->
+  <line x1="56" y1="120" x2="660" y2="120" class="c"/>
+  <g transform="translate(5.25 -3.2) scale(0.7)">
+    <path class="p" d="
+      M265,161 L268,157 L284,157 L287,160 L299,160 Q305,160 305,152 L305,134 L308,131
+      L797,131 L808,139 L862,139 L872,117 L888,117 Q906,124 906,176
+      Q906,228 888,235 L872,235 L862,213 L808,213 L797,221 L308,221 L305,218
+      L305,200 Q305,192 299,192 L287,192 L284,195 L268,195 L265,191 Z"/>
+    <line x1="268" y1="157" x2="268" y2="195" class="t"/>
+    <line x1="284" y1="157" x2="284" y2="195" class="t"/>
+    <line x1="305" y1="134" x2="305" y2="218" class="t"/>
+    <line x1="311" y1="131" x2="311" y2="221" class="t"/>
+    <line x1="315" y1="131" x2="315" y2="221" class="t"/>
+    <line x1="341" y1="131" x2="341" y2="221" class="t"/>
+    <line x1="346" y1="131" x2="346" y2="221" class="t"/>
+    <line x1="797" y1="131" x2="797" y2="221" class="t"/>
+    <line x1="808" y1="139" x2="808" y2="213" class="t"/>
+    <line x1="862" y1="139" x2="862" y2="213" class="t"/>
+    <line x1="872" y1="117" x2="872" y2="235" class="t"/>
+    <line x1="877" y1="117" x2="877" y2="235" class="t"/>
+    <!-- face da ponta destacada (área polida) -->
+    <line x1="265" y1="161" x2="265" y2="191" stroke="#F07D00" stroke-width="4" vector-effect="non-scaling-stroke"/>
+  </g>
+  <text x="300" y="186" class="lbl">PUNÇÃO</text>
+  <text x="380" y="186" class="sm">· face de compressão polida</text>
+  <text x="70" y="172" class="sm" style="letter-spacing:1px">ponta montada</text>
+  <text x="70" y="187" class="sm" style="letter-spacing:1px">de feltro</text>
+
+  <!-- chamada do detalhe A: liga o círculo (193,120 r18) ao detalhe (170,330 r100) -->
+  <circle cx="193" cy="120" r="18" class="d acc" stroke-dasharray="4 3"/>
+  <line x1="191.0" y1="137.9" x2="180.9" y2="230.5" class="d acc" stroke-dasharray="4 3"/>
+  <text x="206" y="96" class="lbl or">A</text>
+
+  <!-- ===== Detalhe A: perfil de rugosidade (deslocado para alinhar com o feltro) ===== -->
+  <g transform="translate(-70 0)">
+  <g clip-path="url(#lente)">
+    <!-- rugoso (antes) -->
+    <g clip-path="url(#rugoso)">
+      <path fill="url(#hatch)" stroke="none"
+        d="M140,314 L148,325 L156,317 L164,327 L172,313 L180,322 L188,315 L196,326 L204,318 L212,324 L220,314 L228,327 L236,316 L244,323 L252,313 L260,325 L268,317 L276,326 L284,315 L292,322 L300,314 L308,324 L316,318 L324,327 L332,315 L340,323 L340,440 L140,440 Z"/>
+      <polyline class="p" points="140,314 148,325 156,317 164,327 172,313 180,322 188,315 196,326 204,318 212,324 220,314 228,327 236,316 244,323 252,313 260,325 268,317 276,326 284,315 292,322 300,314 308,324 316,318 324,327 332,315 340,323"/>
+    </g>
+    <!-- liso (depois) -->
+    <g clip-path="url(#liso)">
+      <path fill="url(#hatch)" stroke="none" d="M140,320 L340,320 L340,440 L140,440 Z"/>
+      <line x1="140" y1="320" x2="340" y2="320" class="p"/>
+    </g>
+    <!-- frente de polimento -->
+    <line x1="140" y1="232" x2="140" y2="430" class="acc" stroke-width="2">
+      <animate attributeName="x1" dur="6s" repeatCount="indefinite" values="140;340;340;140" keyTimes="0;0.58;0.92;1"/>
+      <animate attributeName="x2" dur="6s" repeatCount="indefinite" values="140;340;340;140" keyTimes="0;0.58;0.92;1"/>
+    </line>
+  </g>
+  <circle cx="240" cy="330" r="100" class="p acc"/>
+  <text x="166" y="290" class="sm">DETALHE A</text>
+  <!-- leitura de Ra -->
+  <g>
+    <text x="196" y="400" class="big">Ra 0,8
+      <animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="1;0;0;1" keyTimes="0;0.5;0.92;1"/>
+    </text>
+    <text x="196" y="400" class="big or" opacity="0">Ra 0,03
+      <animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;0.5;0.92;1"/>
+    </text>
+  </g>
+  </g>
+
+  <!-- ===== Resultados ===== -->
+  <text x="517" y="236" class="lbl" text-anchor="middle">MENOS RUGOSIDADE, MENOS:</text>
+
+  <!-- Sticking -->
+  <g transform="translate(442 0)">
+    <!-- ponta da punção -->
+    <path class="p" d="M-30,250 L30,250 L30,294 L26,298 L-26,298 L-30,294 Z"/>
+    <line x1="-14" y1="250" x2="-14" y2="296" class="t"/>
+    <line x1="14" y1="250" x2="14" y2="296" class="t"/>
+    <!-- pó aderido à face -->
+    <g fill="#012D48">
+      <circle cx="-18" cy="302" r="2.6"/><circle cx="-8" cy="303" r="3.2"/><circle cx="4" cy="301.5" r="2.2"/>
+      <circle cx="13" cy="303" r="3"/><circle cx="21" cy="302" r="2"/><circle cx="-1" cy="305" r="1.8"/>
+      <animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="1;1;0;0;1" keyTimes="0;0.3;0.55;0.92;1"/>
+    </g>
+    <!-- comprimido -->
+    <rect x="-34" y="318" width="68" height="30" rx="10" class="p"/>
+    <!-- falha na superfície do comprimido (material arrancado) -->
+    <path d="M-12,318 Q-6,326 2,318" fill="#fff" class="t">
+      <animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="1;1;0;0;1" keyTimes="0;0.3;0.55;0.92;1"/>
+    </path>
+    <text x="0" y="378" class="lbl" text-anchor="middle">Aderência</text>
+    <text x="0" y="398" class="sm" text-anchor="middle">“Sticking”</text>
+  </g>
+
+  <!-- Capping -->
+  <g transform="translate(592 0)">
+    <!-- corpo do comprimido -->
+    <path class="p" d="M-40,312 L40,312 L40,338 Q40,348 30,348 L-30,348 Q-40,348 -40,338 Z"/>
+    <!-- "tampa" que se separa -->
+    <g>
+      <path class="p" d="M-40,312 L-40,302 Q-40,292 -30,292 L30,292 Q40,292 40,302 L40,312"/>
+      <path class="t acc" d="M-40,312 L-28,309 L-16,313 L-4,308 L8,313 L20,309 L32,312 L40,310"/>
+      <animateTransform attributeName="transform" type="translate" dur="6s" repeatCount="indefinite"
+        values="0 -12; 0 -12; 0 0; 0 0; 0 -12" keyTimes="0;0.3;0.55;0.92;1"/>
+    </g>
+    <text x="0" y="378" class="lbl" text-anchor="middle">Laminação</text>
+    <text x="0" y="398" class="sm" text-anchor="middle">“Capping”</text>
+  </g>
+
+</svg>

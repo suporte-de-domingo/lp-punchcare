@@ -19,7 +19,7 @@ export const pt = {
     title: 'Soluções em ferramentais para a indústria farmacêutica',
     intro: [
       'Somos a Punch Care, representantes exclusivos da Adamus S.A. no Brasil, especialistas em punções, matrizes e segmentos de matriz, entre outros, para a indústria farmacêutica.',
-      'Também executamos serviços de polimento e dimensionamento de punções e matrizes além de treinamento e consultoria para a área de compressão.',
+      'Também executamos serviços de polimento e dimensionamento de punções e matrizes, além de treinamento e consultoria para a área de compressão.',
     ],
     primary: 'Soluções',
     secondary: 'Saiba mais',
@@ -30,11 +30,11 @@ export const pt = {
     work: [
       {
         title: 'Polimento de Punções e Matrizes',
-        text: 'Restauramos superfícies reduzindo a rugosidade e consequentemente minimizando possibilidades de aderência “Sticking” e laminação “Capping”',
+        text: 'Restauramos superfícies, reduzindo a rugosidade e, consequentemente, minimizando as possibilidades de aderência (sticking) e de laminação (capping).',
       },
       {
         title: 'Dimensionamento de Punções e Matrizes',
-        text: 'Executamos serviços de dimensionamento que permite identificar desvios que possam causar impactos na qualidade do seu produto como peso, dureza, capping, etc...',
+        text: 'Executamos serviços de dimensionamento que permitem identificar desvios capazes de impactar a qualidade do seu produto, como peso, dureza e capping.',
       },
       {
         title: 'Representação Técnica Especializada',
@@ -46,7 +46,7 @@ export const pt = {
     newsMore: 'Ler tudo',
     adamusTitle: 'Confiamos em quem investe em tecnologia e inovação!',
     adamusText:
-      'A Punch Care representa com exclusividade a Adamus S. A. amplamente reconhecida como um dos maiores fabricantes do mundo, pela excelência em tecnologia e precisão na fabricação de ferramentais e equipamentos para a indústria farmacêutica e nutracêutica.',
+      'A Punch Care representa com exclusividade a Adamus S.A., amplamente reconhecida como um dos maiores fabricantes do mundo pela excelência em tecnologia e precisão na fabricação de ferramentais e equipamentos para as indústrias farmacêutica e nutracêutica.',
     adamusNote:
       'Maior fabricante de punções e matrizes da Polônia e um dos maiores do mundo. Tecnologia de ponta, altíssimo padrão de precisão e inovação no design de ferramentais para compressão.',
   },
@@ -71,13 +71,13 @@ export const pt = {
       },
       {
         title: 'Representação Comercial de Marcas Globais',
-        text: 'Somos representantes oficiais da Adamus S.A., o maior fabricante de punções, matrizes e segmentos para a indústria farmacêutica na Polônia, além de um dos principais fornecedores no mundo.',
+        text: 'Somos representantes oficiais da Adamus S.A., o maior fabricante de punções, matrizes e segmentos de matriz da Polônia para a indústria farmacêutica e um dos principais fornecedores do mundo.',
       },
     ],
     applicationsTitle: 'Aplicações / Equipamentos Atendidos',
     applicationsText:
       'Nossas soluções são aplicadas em diversos equipamentos e componentes da indústria farmacêutica e nutracêutica.',
-    galleryLabel: 'Galeria de punções e matrizes',
+    galleryLabel: 'Galeria de ferramentais e equipamentos',
     galleryPause: 'Pausar galeria',
     galleryPlay: 'Retomar galeria',
     applications: [
@@ -89,7 +89,7 @@ export const pt = {
       },
       {
         title: 'Peças Técnicas para Compressoras',
-        text: 'Atendemos demandas por peças específicas como rampas de extração, cames de enchimento e rolos de compressão.',
+        text: 'Atendemos demandas por peças específicas, como rampas de extração, cames de enchimento e rolos de compressão.',
       },
     ],
   },
@@ -100,12 +100,12 @@ export const pt = {
     philosophyLead: 'Mais do que manutenção. Somos parceiros da sua produtividade.',
     philosophy: [
       'Na Punch Care, acreditamos que excelência técnica e compromisso são os pilares para construir resultados consistentes. Desde 2017, atuamos com foco em polimento e dimensionamento de punções e matrizes, sempre em busca de melhorar processos, reduzir falhas e elevar a performance das linhas de compressão.',
-      'Nosso diferencial está na união entre conhecimento técnico aprofundado e parcerias estratégicas com marcas internacionais. Não entregamos apenas serviços — entregamos confiança, precisão e melhoria contínua para a indústria farmacêutica e nutracêutica brasileira.',
+      'Nosso diferencial está na união entre conhecimento técnico aprofundado e parcerias estratégicas com marcas internacionais. Não entregamos apenas serviços: entregamos confiança, precisão e melhoria contínua para as indústrias farmacêutica e nutracêutica brasileiras.',
     ],
     historyTitle: 'Nossa trajetória',
     historyLead: 'Uma história construída com técnica e propósito.',
     history: [
-      'A Punch Care foi fundada por Oberto Oliveira, profissional com mais de 30 anos de experiência no setor farmacêutico, sendo um dos pioneiros no Brasil no controle de vida útil de punções e matrizes.',
+      'A Punch Care foi fundada por Oberto Oliveira, profissional com mais de 30 anos de experiência no setor farmacêutico e um dos pioneiros no Brasil no controle da vida útil de punções e matrizes.',
       'Com formação técnica e vivência prática em ferramentaria e desenho de projetos, Oberto trouxe uma visão inovadora sobre manutenção e desempenho de ferramentais. Ao longo dos anos, consolidamos nossa atuação com serviços altamente especializados, consultorias técnicas, treinamentos e representação de marcas líderes como a Adamus.',
       'Hoje, seguimos comprometidos em ser a primeira escolha das indústrias que valorizam qualidade, agilidade e conhecimento de verdade.',
     ],
@@ -136,7 +136,7 @@ export const pt = {
       firstName: 'Nome',
       lastName: 'Sobrenome',
       company: 'Empresa',
-      email: 'Email',
+      email: 'E-mail',
       phone: 'Telefone',
       address: 'Endereço da empresa',
       intent: 'Você deseja comprar ou vender material?',
@@ -155,10 +155,10 @@ export const pt = {
     supportText:
       'Fale conosco por telefone, e-mail ou WhatsApp. Nossa equipe está pronta para oferecer o suporte técnico que você precisa.',
     addressTitle: 'Endereço',
-    emailTitle: 'Email',
+    emailTitle: 'E-mail',
     hoursTitle: 'Horário de funcionamento',
-    hours: ['Segunda - Sexta:', '8:00 - 17:00'],
-    phoneTitle: 'Telefone | WhatsApp',
+    hours: ['Segunda a sexta', 'das 8h às 17h'],
+    phoneTitle: 'Telefone e WhatsApp',
   },
   careers: {
     title: 'Comprometimento, conhecimento e paixão pelo que fazemos.',
@@ -166,9 +166,9 @@ export const pt = {
     valuesTitle: 'Nossos valores nos movem',
     values:
       'Na Punch Care, atuamos com ética, responsabilidade e precisão em tudo o que fazemos. Valorizamos a confiança, o respeito entre as pessoas e o comprometimento com a qualidade em cada etapa do trabalho.',
-    cultureTitle: 'Nossa Cultura',
+    cultureTitle: 'Nossa cultura',
     culture:
-      'Somos uma equipe técnica, apaixonada por desafios e movida pela busca constante por soluções inteligentes para a indústria farmacêutica. Investimos em conhecimento, evoluímos com a experiência e cultivamos um ambiente colaborativo e focado em resultado.',
+      'Somos uma equipe técnica, apaixonada por desafios e movida pela busca constante por soluções inteligentes para a indústria farmacêutica. Investimos em conhecimento, evoluímos com a experiência e cultivamos um ambiente colaborativo e focado em resultados.',
     joinTitle: 'Junte-se a nós',
     joinLead: 'Quer fazer parte do time da Punch Care?',
     joinText:
@@ -198,7 +198,7 @@ export const pt = {
     sections: [
       {
         title: '1. Coleta de Informações',
-        text: ['Coletamos dados pessoais de forma voluntária, através de formulários de contato, orçamentos ou download de materiais. As informações podem incluir: nome, e-mail, telefone, empresa, cargo e outros dados relevantes ao atendimento.'],
+        text: ['Coletamos dados pessoais de forma voluntária, através de formulários de contato, orçamentos ou download de materiais. As informações podem incluir: nome, e-mail, telefone, empresa, cargo e outros dados relevantes para o atendimento.'],
       },
       {
         title: '2. Uso das Informações',
@@ -212,7 +212,7 @@ export const pt = {
       },
       {
         title: '3. Compartilhamento de Dados',
-        text: ['Não compartilhamos, vendemos ou alugamos seus dados pessoais com terceiros, exceto quando necessário para cumprimento de obrigações legais ou solicitação expressa do titular dos dados.'],
+        text: ['Não compartilhamos, vendemos ou alugamos seus dados pessoais com terceiros, exceto quando necessário para o cumprimento de obrigações legais ou por solicitação expressa do titular dos dados.'],
       },
       {
         title: '4. Segurança da Informação',
@@ -324,7 +324,7 @@ export const pt = {
         'Quando se trata de produção farmacêutica, cada detalhe é fundamental, principalmente a procedência das ferramentas utilizadas. Temos o orgulho de representar no Brasil a Adamus S.A., uma das maiores fabricantes de ferramentas de compressão e peças de reposição para a indústria farmacêutica.',
       body: [
         'Quando se trata de produção farmacêutica, cada detalhe é fundamental, principalmente a procedência das ferramentas utilizadas. Temos o orgulho de representar no Brasil a Adamus S.A., uma das maiores fabricantes de ferramentas de compressão e peças de reposição para a indústria farmacêutica.',
-        'Com mais de 40 anos de experiência, a Adamus se destaca pelo suporte e atendimento de alta qualidade ao cliente. Nossos processos são realizados por meio de tecnologias robóticas, operando com sistemas CAD/CAM. Garantimos a excelência em produtos e serviços através de nossa equipe altamente qualificada, que atua em conformidade com os Sistemas de Gestão da Qualidade ISO 9001:2015 e ISO 13485:2016.',
+        'Com mais de 40 anos de experiência, a Adamus se destaca pelo suporte e atendimento de alta qualidade ao cliente. Seus processos são realizados com tecnologia robótica e sistemas CAD/CAM. A excelência em produtos e serviços é garantida por uma equipe altamente qualificada, que atua em conformidade com os Sistemas de Gestão da Qualidade ISO 9001:2015 e ISO 13485:2016.',
       ],
       adamus: true,
     },
@@ -337,12 +337,12 @@ export const pt = {
       author: 'Punch Care',
       minutes: 1,
       excerpt:
-        'Diferença de altura entre os punções podem causar desvios de peso e/ou dureza nos comprimidos, podendo inclusive provocar a perda e um lote inteiro de produto.',
+        'Diferenças de altura entre os punções podem causar desvios de peso e/ou dureza nos comprimidos, podendo inclusive provocar a perda de um lote inteiro de produto.',
       body: [
-        'Diferença de altura entre os punções podem causar desvios de peso e/ou dureza nos comprimidos, podendo inclusive provocar a perda e um lote inteiro de produto.',
+        'Diferenças de altura entre os punções podem causar desvios de peso e/ou dureza nos comprimidos, podendo inclusive provocar a perda de um lote inteiro de produto.',
         'Com o serviço de dimensionamento técnico oferecido pela Punch Care, é possível identificar desvios milimétricos antes que se tornem um problema real.',
         'Usamos tecnologia de medição de alta precisão para garantir que seus ferramentais estejam sempre em conformidade com os parâmetros ideais de compressão.',
-        'Dimensionar não é gasto — é investimento em produtividade, segurança e padronização.',
+        'Dimensionar não é gasto: é investimento em produtividade, segurança e padronização.',
       ],
     },
     {
@@ -356,7 +356,7 @@ export const pt = {
         'Problemas como sticking, capping e variações no peso dos comprimidos são sinais claros de desgaste nos ferramentais.',
       body: [
         'Problemas como sticking, capping e variações no peso dos comprimidos são sinais claros de desgaste nos ferramentais. O polimento técnico de punções e matrizes vai muito além da estética: trata-se de uma etapa fundamental para garantir a integridade dos comprimidos, prolongar a vida útil das peças e reduzir falhas na produção.',
-        'Na Punch Care, utilizamos processos robotizados e técnicas refinadas que devolvem às superfícies o acabamento ideal para alto desempenho — tudo com rastreabilidade e precisão dimensional.',
+        'Na Punch Care, utilizamos processos robotizados e técnicas refinadas que devolvem às superfícies o acabamento ideal para alto desempenho, com rastreabilidade e precisão dimensional.',
         'Evite paradas inesperadas e prejuízos operacionais com manutenção preventiva de verdade.',
       ],
     },

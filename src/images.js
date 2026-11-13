@@ -26,5 +26,5 @@ export const images = {
   van: photo('van', '62% 60%'),
   postPolishingVideo: photo('post-polishing-video'),
   postPolishing: photo('post-polishing'),
-  gallery: ['01', '02', '03', '04', '05', '07', '08', '09', '10', '11'].map((number) => photo(`gallery-${number}`)),
+  gallery: ['01', '02', '03', '04', '05', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18'].map((number) => photo(`gallery-${number}`)),
 }

@@ -4,8 +4,8 @@ export const company = {
   phone: '(19) 99838-5373',
   whatsapp: '5519998385373',
   email: 'punchcare@punchcare.com.br',
-  street: 'Av. Laurita Ortega Mari, 1288 – Vila das Oliveiras',
-  city: 'Taboão da Serra – SP',
+  street: 'Av. Laurita Ortega Mari, 1288, Vila das Oliveiras',
+  city: 'Taboão da Serra, SP',
   zip: '06766-360',
   adamus: 'https://www.adamus.com.pl/en/',
   social: [

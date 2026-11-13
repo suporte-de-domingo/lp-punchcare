@@ -33,7 +33,7 @@ export function Footer() {
               id="newsletter-email"
               type="email"
               required
-              placeholder="Email"
+              placeholder={t.contact.fields.email}
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />

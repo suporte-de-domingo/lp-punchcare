@@ -6,7 +6,7 @@ export function Carousel({ images, label, pauseLabel, playLabel }) {
   const copies = [images, images]
 
   return (
-    <div className={`carousel ${paused ? 'carousel-paused' : ''}`}>
+    <div className={`carousel ${paused ? 'carousel-paused' : ''}`} style={{ '--count': images.length }}>
       <div className="carousel-viewport" role="region" aria-label={label} tabIndex={0}>
         <div className="carousel-track">
           {copies.map((list, copy) => (
