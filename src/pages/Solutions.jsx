@@ -6,7 +6,7 @@ import { TrainingDrawing } from '../components/Drawings'
 import { useLanguage } from '../language'
 import { images } from '../images'
 
-const art = ['polishing', 'punch', null, 'representation']
+const art = ['polishing', 'sizing', null, 'representation']
 
 export function Solutions() {
   const { t } = useLanguage()

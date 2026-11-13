@@ -8,7 +8,7 @@ import { useLanguage } from '../language'
 import { images } from '../images'
 import { paths } from '../routes'
 
-const art = ['polishing', 'punch', 'representation']
+const art = ['polishing', 'sizing', 'representation']
 
 export function Home() {
   const { t, to } = useLanguage()

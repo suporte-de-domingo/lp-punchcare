@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 20 652 400" width="1304" height="800">
+  <title>Punch and Die Sizing</title>
+  <style>
+    svg { background: #ffffff; }
+    .p:not([fill]), .t:not([fill]) { fill: none; }
+    .p  { stroke: #012D48; stroke-width: 2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    .t  { stroke: #012D48; stroke-width: 1.1; vector-effect: non-scaling-stroke; }
+    .c  { fill: none; stroke: #012D48; stroke-width: 1; stroke-dasharray: 14 4 2 4; }
+    .d  { fill: none; stroke: #012D48; stroke-width: 1; }
+    .acc { stroke: #F07D00; }
+    text { font-family: "Consolas", "Courier New", monospace; fill: #012D48; letter-spacing: 2px; }
+    .lbl { font-size: 15px; }
+    .sm  { font-size: 12px; letter-spacing: 1.5px; }
+    .xs  { font-size: 10px; letter-spacing: 1px; }
+    .lcd { font-size: 13px; letter-spacing: 1px; font-weight: bold; }
+    .or  { fill: #F07D00; }
+  </style>
+  <defs>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#012D48" stroke-width="1" opacity=".45"/>
+    </pattern>
+  </defs>
+
+  <!-- ===== Suporte: base, coluna ===== -->
+  <path class="p" fill="url(#hatch)" d="M50,398 L50,366 L58,358 L282,358 L290,366 L290,398 Z"/>
+  <path class="t" d="M78,358 L78,364 L94,364 L94,358 M246,358 L246,364 L262,364 L262,358"/>
+  <rect x="204" y="40" width="18" height="318" class="p" fill="#fff"/>
+  <line x1="209" y1="44" x2="209" y2="354" class="t" opacity=".5"/>
+  <rect x="200" y="34" width="26" height="8" rx="2" class="p" fill="#fff"/>
+  <!-- mesa de apoio -->
+  <rect x="116" y="350" width="58" height="8" rx="1" class="p" fill="#fff"/>
+
+  <!-- ===== Punção em pé (cabeça apoiada, ponta para cima) ===== -->
+  <g opacity="1">
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.0187;0.2188;0.2375;0.25;0.2687;0.4688;0.4875;0.5;0.5188;0.7188;0.7375;0.75;0.7688;0.9688;0.9875;1" values="0;1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0" />
+    <g>
+      <animateTransform attributeName="transform" type="translate" dur="8s" repeatCount="indefinite" keyTimes="0;0.0187;0.2188;0.2375;0.25;0.2687;0.4688;0.4875;0.5;0.5188;0.7188;0.7375;0.75;0.7688;0.9688;0.9875;1" values="-24 0;0 0;0 0;24 0;-24 0;0 0;0 0;24 0;-24 0;0 0;0 0;24 0;-24 0;0 0;0 0;24 0;-24 0" />
+      <line x1="145" y1="160" x2="145" y2="362" class="c"/>
+      <g transform="translate(194.28 96.32) scale(0.28) rotate(90)">
+        <path class="p" fill="#fff" d="M265,161 L268,157 L284,157 L287,160 L299,160 Q305,160 305,152 L305,134 L308,131
+      L797,131 L808,139 L862,139 L872,117 L888,117 Q906,124 906,176
+      Q906,228 888,235 L872,235 L862,213 L808,213 L797,221 L308,221 L305,218
+      L305,200 Q305,192 299,192 L287,192 L284,195 L268,195 L265,191 Z"/>
+        <line x1="268" y1="157" x2="268" y2="195" class="t"/>
+        <line x1="284" y1="157" x2="284" y2="195" class="t"/>
+        <line x1="305" y1="134" x2="305" y2="218" class="t"/>
+        <line x1="311" y1="131" x2="311" y2="221" class="t"/>
+        <line x1="315" y1="131" x2="315" y2="221" class="t"/>
+        <line x1="341" y1="131" x2="341" y2="221" class="t"/>
+        <line x1="346" y1="131" x2="346" y2="221" class="t"/>
+        <line x1="797" y1="131" x2="797" y2="221" class="t"/>
+        <line x1="808" y1="139" x2="808" y2="213" class="t"/>
+        <line x1="862" y1="139" x2="862" y2="213" class="t"/>
+        <line x1="872" y1="117" x2="872" y2="235" class="t"/>
+        <line x1="877" y1="117" x2="877" y2="235" class="t"/>
+      </g>
+      <line x1="145" y1="160" x2="145" y2="362" class="c"/>
+    </g>
+  </g>
+
+  <!-- ===== Relógio comparador digital no braço (sobe e desce) ===== -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" dur="8s" repeatCount="indefinite" keyTimes="0;0.0437;0.1875;0.2188;0.25;0.2938;0.4375;0.4688;0.5;0.5437;0.6875;0.7188;0.75;0.7937;0.9375;0.9688;1" values="0 -16;0 0;0 0;0 -16;0 -16;0 0;0 0;0 -16;0 -16;0 0;0 0;0 -16;0 -16;0 0;0 0;0 -16;0 -16" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>
+    <!-- trava na coluna + manípulo -->
+    <rect x="196" y="84" width="34" height="28" rx="3" class="p" fill="#fff"/>
+    <line x1="230" y1="98" x2="240" y2="98" class="p"/>
+    <circle cx="246" cy="98" r="7" class="p" fill="#fff"/>
+    <line x1="241" y1="93" x2="251" y2="103" class="t"/>
+    <!-- braço -->
+    <rect x="186" y="92" width="10" height="12" class="p" fill="#fff"/>
+    <!-- haste superior do apalpador -->
+    <rect x="142" y="46" width="6" height="10" class="p" fill="#fff"/>
+    <!-- corpo do relógio -->
+    <circle cx="145" cy="100" r="44" class="p" fill="#fff"/>
+    <circle cx="145" cy="100" r="38" class="t"/>
+    <rect x="116" y="84" width="58" height="22" rx="2" class="p" fill="#E9EEF1"/>
+    <text x="120" y="80" class="xs" style="font-size:7px;letter-spacing:.5px">mm</text>
+    <text x="170" y="100" class="lcd" text-anchor="end" opacity="0">133.600<animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.0437;0.1875" values="0;1;0" calcMode="discrete"/></text>
+    <text x="170" y="100" class="lcd" text-anchor="end" opacity="0">133.610<animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.2938;0.4375" values="0;1;0" calcMode="discrete"/></text>
+    <text x="170" y="100" class="lcd or" text-anchor="end" opacity="0">133.560<animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.5437;0.6875" values="0;1;0" calcMode="discrete"/></text>
+    <text x="170" y="100" class="lcd" text-anchor="end" opacity="0">133.605<animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.7937;0.9375" values="0;1;0" calcMode="discrete"/></text>
+    <circle cx="131" cy="122" r="4" class="t"/>
+    <circle cx="145" cy="124" r="4" class="t"/>
+    <circle cx="159" cy="122" r="4" class="t"/>
+    <!-- haste e apalpador -->
+    <rect x="139" y="144" width="12" height="14" class="p" fill="#fff"/>
+    <rect x="143" y="158" width="4" height="12" class="p" fill="#fff"/>
+    <circle cx="145" cy="170.5" r="2.2" fill="#012D48"/>
+  </g>
+
+  <!-- rótulos -->
+  <g class="sm" style="letter-spacing:1px">
+    <text x="88" y="66" text-anchor="end">dial</text>
+    <text x="88" y="80" text-anchor="end">indicator</text>
+    <line x1="90" y1="76" x2="104" y2="84" class="d"/>
+    <text x="104" y="262" text-anchor="end">punch</text>
+    <line x1="106" y1="258" x2="128" y2="258" class="d"/>
+    <text x="300" y="66">stand</text>
+    <line x1="298" y1="62" x2="226" y2="54" class="d"/>
+  </g>
+
+  <!-- ===== Registro das medições ===== -->
+  <text x="330" y="96" class="lbl">SET MEASUREMENT</text>
+  <g class="sm">
+    <text x="330" y="118" class="xs">No.</text>
+    <text x="380" y="118" class="xs">LENGTH (mm)</text>
+    <text x="500" y="118" class="xs">DEVIATION</text>
+    <line x1="330" y1="124" x2="610" y2="124" class="d"/>
+    <g opacity="0"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.0437" values="0;1" calcMode="discrete"/>
+      <text x="330" y="142">1</text>
+      <text x="380" y="142">133.600</text>
+      <text x="500" y="142">0.000</text>
+      <text x="606" y="142" text-anchor="end">✓</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.2938" values="0;1" calcMode="discrete"/>
+      <text x="330" y="162">2</text>
+      <text x="380" y="162">133.610</text>
+      <text x="500" y="162">+0.010</text>
+      <text x="606" y="162" text-anchor="end">✓</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.5437" values="0;1" calcMode="discrete"/>
+      <text x="330" y="182" class="or">3</text>
+      <text x="380" y="182" class="or">133.560</text>
+      <text x="500" y="182" class="or">−0.040</text>
+      <text x="606" y="182" text-anchor="end" class="or">✗</text>
+    </g>
+    <g opacity="0"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.7937" values="0;1" calcMode="discrete"/>
+      <text x="330" y="202">4</text>
+      <text x="380" y="202">133.605</text>
+      <text x="500" y="202">+0.005</text>
+      <text x="606" y="202" text-anchor="end">✓</text>
+    </g>
+    <line x1="330" y1="214" x2="610" y2="214" class="d"/>
+    <text x="330" y="230" class="xs">tolerance ±0.02 mm</text>
+  </g>
+
+  <!-- ===== Impactos dos desvios ===== -->
+  <text x="330" y="268" class="lbl">DEVIATIONS AFFECT:</text>
+
+  <!-- Peso -->
+  <g transform="translate(376 20)">
+    <line x1="0" y1="300" x2="0" y2="345" class="p"/>
+    <line x1="-24" y1="345" x2="24" y2="345" class="p"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" dur="8s" repeatCount="indefinite" keyTimes="0;0.525;0.5563;0.7063;0.7375;1" values="0 0 300;0 0 300;-9 0 300;-9 0 300;0 0 300;0 0 300" />
+      <line x1="-36" y1="300" x2="36" y2="300" class="p"/>
+      <line x1="-34" y1="300" x2="-34" y2="318" class="t"/>
+      <line x1="34" y1="300" x2="34" y2="318" class="t"/>
+      <path d="M-48,318 Q-34,330 -20,318 Z" class="p"/>
+      <path d="M20,318 Q34,330 48,318 Z" class="p"/>
+      <rect x="-42" y="309" width="16" height="9" rx="3" class="p"/>
+    </g>
+    <circle cx="0" cy="300" r="3" fill="#012D48"/>
+    <text x="0" y="372" class="lbl" text-anchor="middle">Weight</text>
+  </g>
+
+  <!-- Dureza -->
+  <g transform="translate(486 20)">
+    <rect x="-46" y="306" width="14" height="28" class="p"/>
+    <rect x="32" y="306" width="14" height="28" class="p"/>
+    <line x1="-46" y1="320" x2="-52" y2="320" class="p"/>
+    <line x1="46" y1="320" x2="52" y2="320" class="p"/>
+    <rect x="-30" y="304" width="60" height="32" rx="12" class="p"/>
+    <path d="M2,304 L-4,314 L4,322 L-2,336" class="acc" fill="none" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.5437;0.7188" values="0;1;0" calcMode="discrete"/>
+    </path>
+    <text x="0" y="372" class="lbl" text-anchor="middle">Hardness</text>
+  </g>
+
+  <!-- Capping -->
+  <g transform="translate(578 20)">
+    <path class="p" d="M-32,312 L32,312 L32,338 Q32,348 24,348 L-24,348 Q-32,348 -32,338 Z"/>
+    <g>
+      <path class="p" d="M-32,312 L-32,302 Q-32,292 -24,292 L24,292 Q32,292 32,302 L32,312"/>
+      <path class="t acc" d="M-32,312 L-22,309 L-12,313 L-2,308 L8,313 L18,309 L26,312 L32,310" opacity="0">
+        <animate attributeName="opacity" dur="8s" repeatCount="indefinite" keyTimes="0;0.5437;0.7188" values="0;1;0" calcMode="discrete"/>
+      </path>
+      <animateTransform attributeName="transform" type="translate" dur="8s" repeatCount="indefinite" keyTimes="0;0.525;0.5563;0.7063;0.7375;1" values="0 0;0 0;0 -10;0 -10;0 0;0 0" />
+    </g>
+    <text x="0" y="372" class="lbl" text-anchor="middle">Capping</text>
+  </g>
+
+  <text x="330" y="414" class="sm">… and other tablet defects</text>
+</svg>
