@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 20 640 380" width="1280" height="760">
+  <title>Representação Técnica Especializada</title>
+  <style>
+    svg { background: #ffffff; }
+    .p:not([fill]), .t:not([fill]) { fill: none; }
+    .p  { stroke: #012D48; stroke-width: 2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    .t  { stroke: #012D48; stroke-width: 1.1; vector-effect: non-scaling-stroke; }
+    .c  { fill: none; stroke: #012D48; stroke-width: 1; stroke-dasharray: 14 4 2 4; }
+    .d  { fill: none; stroke: #012D48; stroke-width: 1; }
+    .acc { stroke: #F07D00; }
+    text { font-family: "Consolas", "Courier New", monospace; fill: #012D48; letter-spacing: 2px; }
+    .lbl { font-size: 15px; }
+    .sm  { font-size: 12px; letter-spacing: 1px; }
+    .or  { fill: #F07D00; }
+  </style>
+  <defs>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#012D48" stroke-width="1" opacity=".55"/>
+    </pattern>
+  </defs>
+
+  <!-- ===== Origem: fabricante ===== -->
+  <g transform="translate(110 100)">
+    <path d="M0,0 C-15,-15 -15,-36 0,-36 C15,-36 15,-15 0,0 Z" class="p" fill="#fff"/>
+    <circle cx="0" cy="-23" r="5" class="p"/>
+    <text x="0" y="24" class="lbl" text-anchor="middle">ADAMUS S.A.</text>
+    <text x="0" y="40" class="sm" text-anchor="middle">fabricante · Polônia</text>
+  </g>
+
+  <!-- ===== Destino: representante exclusivo ===== -->
+  <g transform="translate(530 100)">
+    <circle cx="0" cy="-23" r="22" class="d acc" stroke-dasharray="4 3">
+      
+    </circle>
+    <path d="M0,0 C-15,-15 -15,-36 0,-36 C15,-36 15,-15 0,0 Z" class="p acc" fill="#fff"/>
+    <circle cx="0" cy="-23" r="5" class="p acc"/>
+    <text x="0" y="24" class="lbl" text-anchor="middle">PUNCH CARE</text>
+    <text x="0" y="40" class="sm" text-anchor="middle">representante</text>
+    <text x="0" y="54" class="sm or" text-anchor="middle">exclusivo · Brasil</text>
+  </g>
+
+  <!-- ===== Rota ===== -->
+  <path id="rota" d="M128,70 Q320,-4 512,70" class="c">
+    
+  </path>
+  <g>
+    
+    <g transform="translate(-8 -7)">
+      <rect x="0" y="0" width="16" height="12" fill="#fff" class="p acc"/>
+      <line x1="0" y1="4" x2="16" y2="4" class="t acc"/>
+      <line x1="8" y1="0" x2="8" y2="4" class="t acc"/>
+    </g>
+  </g>
+  <text x="320" y="92" class="lbl" text-anchor="middle">REPRESENTAÇÃO</text>
+  <text x="320" y="110" class="lbl" text-anchor="middle">TÉCNICA <tspan class="or">EXCLUSIVA</tspan></text>
+
+  <line x1="46" y1="190" x2="594" y2="190" class="c"/>
+
+  <!-- ===== Linha de produtos ===== -->
+  <text x="46" y="226" class="lbl">LINHA COMPLETA DE PRODUTOS:</text>
+  <g>
+      <line x1="92" y1="252" x2="92" y2="348" class="c"/>
+      <g transform="translate(114.88 223.88) scale(0.13) rotate(90)">
+        <path class="p" fill="#fff" d="M265,161 L268,157 L284,157 L287,160 L299,160 Q305,160 305,152 L305,134 L308,131
+      L797,131 L808,139 L862,139 L872,117 L888,117 Q906,124 906,176
+      Q906,228 888,235 L872,235 L862,213 L808,213 L797,221 L308,221 L305,218
+      L305,200 Q305,192 299,192 L287,192 L284,195 L268,195 L265,191 Z"/>
+        <line x1="268" y1="157" x2="268" y2="195" class="t"/><line x1="284" y1="157" x2="284" y2="195" class="t"/><line x1="305" y1="131" x2="305" y2="221" class="t"/><line x1="797" y1="131" x2="797" y2="221" class="t"/><line x1="808" y1="131" x2="808" y2="221" class="t"/><line x1="862" y1="117" x2="862" y2="235" class="t"/><line x1="872" y1="117" x2="872" y2="235" class="t"/>
+      </g>
+      <line x1="92" y1="252" x2="92" y2="348" class="c"/>
+    </g>
+  <g>
+      <!-- meio corte: esquerda em vista, direita em corte hachurado com furo (ØD H7) -->
+      <path class="p" fill="#fff" d="M178,264 L234,264 L236,266 L236,291 Q229,299 236,307 L236,334 L234,336 L178,336 L176,334 L176,307 Q183,299 176,291 L176,266 Z"/>
+      <!-- corte (metade direita) -->
+      <path fill="url(#hatch)" stroke="none" d="M220,264 L234,264 L236,266 L236,291 Q229,299 236,307 L236,334 L234,336 L216,336 L216,275 Z"/>
+      <path class="p" d="M220,264 L216,275 L216,336"/>
+      <line x1="216" y1="275" x2="206" y2="275" class="t"/>
+      <!-- vista (metade esquerda): chanfro, rasgo de fixação, faixa inferior -->
+      <line x1="176" y1="268" x2="206" y2="268" class="t"/>
+      <line x1="176" y1="291" x2="206" y2="291" class="t"/>
+      <line x1="176" y1="307" x2="206" y2="307" class="t"/>
+      <line x1="176" y1="318" x2="206" y2="318" class="t"/>
+      <circle cx="179" cy="327" r="1.6" fill="#012D48"/>
+      <line x1="206" y1="256" x2="206" y2="344" class="c"/>
+    </g>
+  <g>
+      <path class="p" d="M261.7,286.7 A110 110 0 0 1 378.3,286.7 L351.8,329.1 A60 60 0 0 0 288.2,329.1 Z"/>
+      <circle cx="290.9" cy="300.1" r="7" class="p"/>
+      <circle cx="320" cy="295" r="7" class="p"/>
+      <circle cx="349.1" cy="300.1" r="7" class="p"/>
+      <path d="M268,305 A85 85 0 0 1 372,305" class="c"/>
+    </g>
+  <g>
+      <rect x="402" y="262" width="64" height="76" rx="2" class="p"/>
+      <line x1="404" y1="338" x2="404" y2="344" class="p"/>
+      <line x1="464" y1="338" x2="464" y2="344" class="p"/>
+      <line x1="406" y1="290" x2="462" y2="290" class="t"/>
+      <line x1="406" y1="314" x2="462" y2="314" class="t"/>
+      <line x1="428" y1="302" x2="440" y2="302" class="p"/>
+      <line x1="428" y1="326" x2="440" y2="326" class="p"/>
+      <g>
+        <rect x="406" y="266" width="56" height="22" fill="#fff" class="p"/>
+        <line x1="416" y1="270" x2="416" y2="284" class="p"/><line x1="425" y1="270" x2="425" y2="284" class="p"/><line x1="434" y1="270" x2="434" y2="284" class="p"/><line x1="443" y1="270" x2="443" y2="284" class="p"/><line x1="452" y1="270" x2="452" y2="284" class="p"/>
+        <line x1="428" y1="278" x2="440" y2="278" class="p" opacity="0"/>
+      </g>
+    </g>
+  <g>
+      <g>
+        <path class="p" d="M538.00,275.00 L540.04,270.08 L544.07,270.72 L544.49,276.03 L548.50,277.81 L552.73,274.57 L555.90,277.14 L553.61,281.95 L556.19,285.50 L561.47,284.81 L562.93,288.62 L558.54,291.63 L559.00,296.00 L563.92,298.04 L563.28,302.07 L557.97,302.49 L556.19,306.50 L559.43,310.73 L556.86,313.90 L552.05,311.61 L548.50,314.19 L549.19,319.47 L545.38,320.93 L542.37,316.54 L538.00,317.00 L535.96,321.92 L531.93,321.28 L531.51,315.97 L527.50,314.19 L523.27,317.43 L520.10,314.86 L522.39,310.05 L519.81,306.50 L514.53,307.19 L513.07,303.38 L517.46,300.37 L517.00,296.00 L512.08,293.96 L512.72,289.93 L518.03,289.51 L519.81,285.50 L516.57,281.27 L519.14,278.10 L523.95,280.39 L527.50,277.81 L526.81,272.53 L530.62,271.07 L533.63,275.46 Z"/>
+      <circle cx="538" cy="296" r="7" class="p"/>
+      </g>
+      <g>
+        <path class="p" d="M573.00,313.00 L574.76,309.10 L578.19,309.93 L577.99,314.20 L580.78,316.22 L584.78,314.71 L586.62,317.72 L583.46,320.60 L584.00,324.00 L587.90,325.76 L587.07,329.19 L582.80,328.99 L580.78,331.78 L582.29,335.78 L579.28,337.62 L576.40,334.46 L573.00,335.00 L571.24,338.90 L567.81,338.07 L568.01,333.80 L565.22,331.78 L561.22,333.29 L559.38,330.28 L562.54,327.40 L562.00,324.00 L558.10,322.24 L558.93,318.81 L563.20,319.01 L565.22,316.22 L563.71,312.22 L566.72,310.38 L569.60,313.54 Z"/>
+      <circle cx="573" cy="324" r="4" class="p"/>
+      </g>
+    </g>
+  <g text-anchor="middle">
+    <text x="92" y="370" class="sm"><tspan x="92" dy="0">Punções</tspan></text>
+    <text x="92" y="370" class="sm or" opacity="0"><tspan x="92" dy="0">Punções</tspan></text>
+    <line x1="62" y1="377" x2="122" y2="377" stroke="#F07D00" stroke-width="2" opacity="0"></line>
+  </g>
+  <g text-anchor="middle">
+    <text x="206" y="370" class="sm"><tspan x="206" dy="0">Matrizes</tspan></text>
+    <text x="206" y="370" class="sm or" opacity="0"><tspan x="206" dy="0">Matrizes</tspan></text>
+    <line x1="176" y1="377" x2="236" y2="377" stroke="#F07D00" stroke-width="2" opacity="0"></line>
+  </g>
+  <g text-anchor="middle">
+    <text x="320" y="370" class="sm"><tspan x="320" dy="0">Segmentos</tspan><tspan x="320" dy="15">de matriz</tspan></text>
+    <text x="320" y="370" class="sm or" opacity="0"><tspan x="320" dy="0">Segmentos</tspan><tspan x="320" dy="15">de matriz</tspan></text>
+    <line x1="290" y1="392" x2="350" y2="392" stroke="#F07D00" stroke-width="2" opacity="0"></line>
+  </g>
+  <g text-anchor="middle">
+    <text x="434" y="370" class="sm"><tspan x="434" dy="0">Equipamentos</tspan></text>
+    <text x="434" y="370" class="sm or" opacity="0"><tspan x="434" dy="0">Equipamentos</tspan></text>
+    <line x1="404" y1="377" x2="464" y2="377" stroke="#F07D00" stroke-width="2" opacity="0"></line>
+  </g>
+  <g text-anchor="middle">
+    <text x="548" y="370" class="sm"><tspan x="548" dy="0">Peças de</tspan><tspan x="548" dy="15">reposição</tspan></text>
+    <text x="548" y="370" class="sm or" opacity="0"><tspan x="548" dy="0">Peças de</tspan><tspan x="548" dy="15">reposição</tspan></text>
+    <line x1="518" y1="392" x2="578" y2="392" stroke="#F07D00" stroke-width="2" opacity="0"></line>
+  </g>
+</svg>

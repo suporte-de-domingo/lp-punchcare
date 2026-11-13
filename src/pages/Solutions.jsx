@@ -1,11 +1,12 @@
 import { PageHeader } from '../components/PageHeader'
 import { Carousel } from '../components/Carousel'
 import { Reveal } from '../components/Reveal'
-import { DieDrawing, PunchDrawing, ToolingSetDrawing, TrainingDrawing } from '../components/Drawings'
+import { CardArt } from '../components/CardArt'
+import { TrainingDrawing } from '../components/Drawings'
 import { useLanguage } from '../language'
 import { images } from '../images'
 
-const drawings = [PunchDrawing, DieDrawing, TrainingDrawing, ToolingSetDrawing]
+const art = ['polishing', 'punch', null, 'representation']
 
 export function Solutions() {
   const { t } = useLanguage()
@@ -23,10 +24,9 @@ export function Solutions() {
           </Reveal>
           <div className="card-grid card-grid-2">
             {page.services.map((service, index) => {
-              const Drawing = drawings[index]
               return (
                 <Reveal as="article" key={service.title} className="work-card" delay={(index % 2) * 120}>
-                  <Drawing />
+                  {art[index] ? <CardArt name={art[index]} lang={t.lang} /> : <div className="card-art"><TrainingDrawing /></div>}
                   <h3>{service.title}</h3>
                   <p className="muted">{service.text}</p>
                 </Reveal>

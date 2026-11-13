@@ -566,8 +566,27 @@ p {
   box-shadow: 0 24px 48px -32px rgba(1, 45, 72, 0.45);
 }
 
-.work-card .drawing {
-  margin-bottom: 28px;
+.card-art {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 10;
+  margin: calc(clamp(24px, 3vw, 36px) * -0.5) calc(clamp(24px, 3vw, 36px) * -0.6) 28px;
+}
+
+.card-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-art .drawing {
+  width: 78%;
+  height: auto;
+}
+
+.card-art .drawing text {
+  font: 400 12px 'Consolas', 'Courier New', monospace;
+  letter-spacing: 1px;
 }
 
 .work-card .number {
@@ -593,7 +612,7 @@ p {
 .drawing .draw {
   fill: none;
   stroke: var(--navy);
-  stroke-width: 1.6;
+  stroke-width: 1.2;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
 }
@@ -610,27 +629,6 @@ p {
   stroke-dasharray: 10 5 2 5;
   opacity: 0;
   transition: opacity 0.6s 0.8s;
-}
-
-.drawing pattern path {
-  stroke: var(--steel);
-  stroke-width: 0.8;
-}
-
-.drawing .halo {
-  paint-order: stroke;
-  stroke: var(--white);
-  stroke-width: 4px;
-}
-
-.drawing .hatch {
-  stroke: none;
-  opacity: 0;
-  transition: opacity 0.6s 1s;
-}
-
-.is-visible .hatch {
-  opacity: 0.55;
 }
 
 .drawing text {
@@ -798,7 +796,7 @@ p {
 .carousel-track {
   display: flex;
   width: max-content;
-  animation: carousel 60s linear infinite;
+  animation: carousel calc(var(--count) * 6s) linear infinite;
 }
 
 .carousel-viewport:hover .carousel-track,
@@ -1479,7 +1477,6 @@ p {
   }
 
   .drawing text,
-  .drawing .hatch,
   .drawing .centerline {
     opacity: 1;
   }

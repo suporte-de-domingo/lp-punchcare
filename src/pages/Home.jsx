@@ -3,12 +3,12 @@ import { Photo } from '../components/Photo'
 import { Reveal } from '../components/Reveal'
 import { PostCard } from '../components/PostCard'
 import { Adamus } from '../components/Adamus'
-import { DieDrawing, PunchDrawing, ToolingSetDrawing } from '../components/Drawings'
+import { CardArt } from '../components/CardArt'
 import { useLanguage } from '../language'
 import { images } from '../images'
 import { paths } from '../routes'
 
-const drawings = [PunchDrawing, DieDrawing, ToolingSetDrawing]
+const art = ['polishing', 'punch', 'representation']
 
 export function Home() {
   const { t, to } = useLanguage()
@@ -57,10 +57,9 @@ export function Home() {
           </Reveal>
           <div className="card-grid card-grid-3">
             {home.work.map((item, index) => {
-              const Drawing = drawings[index]
               return (
                 <Reveal as="article" key={item.title} className="work-card" delay={index * 120}>
-                  <Drawing />
+                  <CardArt name={art[index]} lang={t.lang} />
                   <span className="number">0{index + 1}</span>
                   <h3>{item.title}</h3>
                   <p className="muted">{item.text}</p>
