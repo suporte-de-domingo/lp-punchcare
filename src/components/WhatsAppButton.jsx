@@ -1,8 +1,10 @@
-import { company } from '../content/company'
+import { whatsappLink } from '../content/company'
+import { useLanguage } from '../language'
 
 export function WhatsAppButton() {
+  const { t } = useLanguage()
   return (
-    <a className="whatsapp" href={`https://wa.me/${company.whatsapp}`} target="_blank" rel="noreferrer" aria-label="WhatsApp">
+    <a className="whatsapp" href={whatsappLink(t.whatsapp.greeting)} target="_blank" rel="noreferrer" aria-label={t.whatsapp.label} title={t.whatsapp.label}>
       <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
         <path
           fill="currentColor"

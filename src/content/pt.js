@@ -159,6 +159,7 @@ export const pt = {
     hoursTitle: 'Horário de funcionamento',
     hours: ['Segunda a sexta', 'das 8h às 17h'],
     phoneTitle: 'Telefone e WhatsApp',
+    socialTitle: 'Redes sociais',
   },
   careers: {
     title: 'Comprometimento, conhecimento e paixão pelo que fazemos.',
@@ -176,6 +177,12 @@ export const pt = {
     submit: 'Enviar candidatura',
     attachNote: 'Ao enviar, seu e-mail abre com os dados preenchidos. Anexe o seu currículo antes de mandar.',
     subject: 'Candidatura',
+  },
+  whatsapp: {
+    label: 'Conversar no WhatsApp',
+    greeting: 'Olá! Vim pelo site da Punch Care e gostaria de mais informações.',
+    serviceCta: 'Pedir orçamento pelo WhatsApp',
+    service: 'Olá! Vim pelo site da Punch Care e gostaria de um orçamento para:',
   },
   footer: {
     about:
