@@ -160,6 +160,7 @@ export const en = {
     hoursTitle: 'Business hours',
     hours: ['Monday to Friday', '8 AM to 5 PM'],
     phoneTitle: 'Phone and WhatsApp',
+    socialTitle: 'Social media',
   },
   careers: {
     title: 'Commitment, knowledge, and passion for what we do.',
@@ -177,6 +178,12 @@ export const en = {
     submit: 'Send application',
     attachNote: 'Your email app opens with the details filled in. Attach your CV before sending.',
     subject: 'Application',
+  },
+  whatsapp: {
+    label: 'Chat on WhatsApp',
+    greeting: 'Hello! I found you on the Punch Care website and would like more information.',
+    serviceCta: 'Request a quote on WhatsApp',
+    service: 'Hello! I found you on the Punch Care website and would like a quote for:',
   },
   footer: {
     about:

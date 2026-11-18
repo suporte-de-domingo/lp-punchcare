@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { PageHeader } from '../components/PageHeader'
 import { Reveal } from '../components/Reveal'
 import { useLanguage } from '../language'
+import { SocialLinks } from '../components/SocialLinks'
 import { company, mailtoLink, whatsappLink } from '../content/company'
 
 const emptyForm = {
@@ -162,9 +163,15 @@ export function Contact() {
               <div>
                 <dt>{page.phoneTitle}</dt>
                 <dd>
-                  <a href={whatsappLink()} target="_blank" rel="noreferrer">
+                  <a href={whatsappLink(t.whatsapp.greeting)} target="_blank" rel="noreferrer">
                     {company.phone}
                   </a>
+                </dd>
+              </div>
+              <div>
+                <dt>{page.socialTitle}</dt>
+                <dd>
+                  <SocialLinks className="social-links-dark" label={page.socialTitle} />
                 </dd>
               </div>
             </dl>

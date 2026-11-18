@@ -5,6 +5,7 @@ import { CardArt } from '../components/CardArt'
 import { TrainingDrawing } from '../components/Drawings'
 import { useLanguage } from '../language'
 import { images } from '../images'
+import { whatsappLink } from '../content/company'
 
 const art = ['polishing', 'sizing', null, 'representation']
 
@@ -29,6 +30,14 @@ export function Solutions() {
                   {art[index] ? <CardArt name={art[index]} lang={t.lang} /> : <div className="card-art"><TrainingDrawing /></div>}
                   <h3>{service.title}</h3>
                   <p className="muted">{service.text}</p>
+                  <a
+                    className="card-link"
+                    href={whatsappLink(`${t.whatsapp.service} ${service.title}.`)}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {t.whatsapp.serviceCta}
+                  </a>
                 </Reveal>
               )
             })}

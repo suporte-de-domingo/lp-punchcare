@@ -4,7 +4,8 @@ import { Logo } from './Logo'
 import { WhatsAppButton } from './WhatsAppButton'
 import { useLanguage } from '../language'
 import { paths } from '../routes'
-import { company, mailtoLink } from '../content/company'
+import { SocialLinks } from './SocialLinks'
+import { company, mailtoLink, whatsappLink } from '../content/company'
 
 export function Footer() {
   const { t, to } = useLanguage()
@@ -49,18 +50,12 @@ export function Footer() {
             {company.city}, {t.footer.zip} {company.zip}
           </span>
           <a href={`mailto:${company.email}`}>{company.email}</a>
-          <a href={`https://wa.me/${company.whatsapp}`} target="_blank" rel="noreferrer">
+          <a href={whatsappLink(t.whatsapp.greeting)} target="_blank" rel="noreferrer">
             {company.phone}
           </a>
         </address>
 
-        <nav className="footer-social" aria-label={t.footer.social}>
-          {company.social.map((item) => (
-            <a key={item.name} href={item.href} target="_blank" rel="noreferrer">
-              {item.name}
-            </a>
-          ))}
-        </nav>
+        <SocialLinks className="footer-social" label={t.footer.social} />
       </div>
 
       <div className="container footer-bottom">
