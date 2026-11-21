@@ -1,0 +1,61 @@
+# Publica o site em www.punchcare.com.br a cada push no develop: gera o build
+# (yarn build → dist) e copia para ~/lp-punchcare/site no servidor Lightsail
+# do PC Hub, onde o nginx do hub serve os arquivos (configuração no repositório
+# pc-hub-app, em nginx/sites/punchcare.conf).
+#
+# Precisa do secret EC2_SSH_KEY (Settings → Secrets and variables → Actions):
+# a mesma chave privada usada no deploy do pc-hub-app.
+name: Deploy do site
+
+on:
+  push:
+    branches: [develop]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-site
+  cancel-in-progress: false
+
+env:
+  # Servidor Lightsail pc-hub-servidor (sa-east-1), IP fixo pc-hub-ip.
+  EC2_HOST: 54.233.119.82
+  # Chave pública do servidor (não é segredo): garante que a Action fala com a máquina certa.
+  EC2_HOST_KEY: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIp4Ohvh1bx3lIqSq6Rahpuc9du+idqYu2ZFvgBVVV+c
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Gerar o site
+        env:
+          VITE_SITE_URL: https://www.punchcare.com.br
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+          test -f dist/index.html
+
+      - name: Preparar acesso SSH
+        env:
+          EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$EC2_SSH_KEY" | tr -d '\r' > ~/.ssh/deploy
+          chmod 600 ~/.ssh/deploy
+          if ! ssh-keygen -y -f ~/.ssh/deploy > /dev/null; then
+            echo "::error::O secret EC2_SSH_KEY não é uma chave privada SSH válida."
+            exit 1
+          fi
+          echo "$EC2_HOST $EC2_HOST_KEY" > ~/.ssh/known_hosts
+
+      - name: Copiar o site para o servidor
+        run: |
+          ssh -i ~/.ssh/deploy ubuntu@$EC2_HOST "mkdir -p ~/lp-punchcare/site"
+          rsync -az --delete -e "ssh -i ~/.ssh/deploy" dist/ ubuntu@$EC2_HOST:lp-punchcare/site/
